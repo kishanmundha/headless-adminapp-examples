@@ -7,14 +7,8 @@ import {
   Input,
   tokens,
 } from '@fluentui/react-components';
-
 import dayjs from 'dayjs';
-
-import {
-  useDataGridSchema,
-  useGridData,
-  useGridDataState,
-} from '@headless-adminapp/app/datagrid/hooks';
+import { useGridData } from '@headless-adminapp/app/datagrid/hooks';
 import { Data, RetriveRecordsResult } from '@headless-adminapp/core/transport';
 import { Message } from '../schema/message';
 import { Customer } from '../schema/customer';
@@ -31,8 +25,6 @@ const SendIcon = bundleLazyIcon('Send24Regular', 'Send24Filled');
 export function TicketMessages() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const data = useGridData() as RetriveRecordsResult<Message>;
-  const dataState = useGridDataState();
-  const schema = useDataGridSchema();
   const refresh = useGridRefresh();
 
   const recordId = useRecordId();
