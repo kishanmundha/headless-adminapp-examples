@@ -1,4 +1,4 @@
-import { SessionResolver } from '@/packages/app/auth';
+import { SessionResolver } from '@headless-adminapp/app/auth';
 import { faker } from '@faker-js/faker';
 
 export const sessionResolver: SessionResolver = async () => {
