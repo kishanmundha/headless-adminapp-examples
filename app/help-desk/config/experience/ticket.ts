@@ -181,6 +181,42 @@ export const ticketSchemaExperience = builder.defineExperience({
             ],
           },
         ],
+        processFlow: {
+          getSteps: (context) => {
+            const activatedFlagMapping: Record<string, string[]> = {
+              open: ['open'],
+              in_progress: ['open', 'in_progress'],
+              resolved: ['open', 'in_progress', 'resolved'],
+            };
+
+            if (!context.primaryControl.recordId) {
+              return null;
+            }
+
+            const status = context.primaryControl.originalData
+              ?.status as string;
+
+            if (!status) {
+              return null;
+            }
+
+            return [
+              {
+                label: 'Open',
+                isActivated: activatedFlagMapping[status]?.includes('open'),
+              },
+              {
+                label: 'In Progress',
+                isActivated:
+                  activatedFlagMapping[status]?.includes('in_progress'),
+              },
+              {
+                label: 'Resolved',
+                isActivated: activatedFlagMapping[status]?.includes('resolved'),
+              },
+            ];
+          },
+        },
       }),
     },
   ],
