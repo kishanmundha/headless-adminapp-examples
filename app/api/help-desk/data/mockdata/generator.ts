@@ -42,7 +42,10 @@ const agents: DbAgent[] = new Array(2).fill(null).map(() => {
       lastName,
       provider: 'support.com',
     }),
-    avatar: faker.image.urlPicsumPhotos(),
+    avatar: faker.image.urlPicsumPhotos({
+      width: 50,
+      height: 50,
+    }),
   };
 });
 
@@ -68,7 +71,10 @@ const customers: DbCustomer[] = new Array(30).fill(null).map(() => {
     fullName: `${firstName} ${lastName}`,
     email: faker.internet.email({ firstName, lastName }),
     role: 'user',
-    avatar: faker.image.urlLoremFlickr(),
+    avatar: faker.image.urlLoremFlickr({
+      width: 50,
+      height: 50,
+    }),
     phone: faker.phone.number(),
     address: faker.location.streetAddress(),
     city: faker.location.city(),

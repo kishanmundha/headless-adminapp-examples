@@ -9,6 +9,7 @@ export const customerSchema = defineSchema({
   primaryAttribute: 'fullName',
   createdAtAttribute: 'created_at',
   updatedAtAttribute: 'updated_at',
+  avatarAttribute: 'avatar',
   ownership: 'scoped',
   attributes: {
     id: {

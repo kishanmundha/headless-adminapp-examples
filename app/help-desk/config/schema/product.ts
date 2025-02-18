@@ -40,12 +40,14 @@ export const productSchema = defineSchema({
       format: 'integer',
       label: 'Tickets',
       required: true,
+      default: 0,
     },
     customers: {
       type: 'number',
       format: 'integer',
       label: 'Customers',
       required: true,
+      default: 0,
     },
   },
 });
