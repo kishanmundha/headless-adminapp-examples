@@ -85,6 +85,10 @@ export const customerSchemaExperience = builder.defineExperience({
                         type: 'standard',
                         attributeName: 'email',
                       },
+                      {
+                        type: 'standard',
+                        attributeName: 'phone',
+                      },
                     ],
                   },
                 ],

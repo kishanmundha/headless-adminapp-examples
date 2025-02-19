@@ -75,7 +75,7 @@ const customers: DbCustomer[] = new Array(30).fill(null).map(() => {
       width: 50,
       height: 50,
     }),
-    phone: faker.phone.number(),
+    phone: faker.phone.number({ style: 'international' }),
     address: faker.location.streetAddress(),
     city: faker.location.city(),
     zipCode: faker.location.zipCode(),
