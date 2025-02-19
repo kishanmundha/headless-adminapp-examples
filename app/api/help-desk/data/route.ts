@@ -4,11 +4,9 @@ import { ExecuteParams, IServerSdk } from '@headless-adminapp/server-sdk';
 import { SequelizeServerSdk } from '@headless-adminapp/server-sdk-sequelize';
 import { schemaStore } from './config';
 import { sequelize } from './config/sequelize';
-import { prepareMockData } from './mockdata/generator';
 
 export async function POST(req: NextRequest) {
   try {
-    await prepareMockData();
     const body = await req.json();
 
     if (body.type === 'customAction') {

@@ -19,7 +19,7 @@ export const messageSchema = defineSchema({
     },
     message: {
       type: 'string',
-      format: 'text',
+      format: 'textarea',
       label: 'Message',
     },
     timestamp: {

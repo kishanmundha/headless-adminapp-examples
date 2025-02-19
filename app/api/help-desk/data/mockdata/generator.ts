@@ -526,7 +526,7 @@ async function prepareMockDataInternal() {
   await schemaStore.getModel('messages').bulkCreate(messages);
 }
 
-export async function prepareMockData() {
+async function prepareMockData() {
   if (generated) {
     return;
   }
