@@ -503,10 +503,18 @@
     "@griffel/react" "^1.5.22"
     "@swc/helpers" "^0.5.1"
 
-"@fluentui/react-icons@^2.0.237", "@fluentui/react-icons@^2.0.239", "@fluentui/react-icons@^2.0.245", "@fluentui/react-icons@^2.0.247":
+"@fluentui/react-icons@^2.0.237", "@fluentui/react-icons@^2.0.239", "@fluentui/react-icons@^2.0.245":
   version "2.0.270"
   resolved "https://registry.yarnpkg.com/@fluentui/react-icons/-/react-icons-2.0.270.tgz#58ee91a0bc76f341daba4321506888bf195db216"
   integrity sha512-XFAUxbOTH5gb/eTZ5UDR/841tbNskr2SNa/hshsQdojyEKMjBxNNcXo2ruesdfCGKsz/KOlmSh2sZu7NmN2N7Q==
+  dependencies:
+    "@griffel/react" "^1.0.0"
+    tslib "^2.1.0"
+
+"@fluentui/react-icons@^2.0.274":
+  version "2.0.274"
+  resolved "https://registry.yarnpkg.com/@fluentui/react-icons/-/react-icons-2.0.274.tgz#b60180c9d4baa0423e85ea6a5193fe89b846b144"
+  integrity sha512-URmKlK8yS8f+RNsqi1pHBiL91V8RFBJlIBrPnsm8GcZsZv3vhA8k9jUinGyiMKgcsgcUulGPT/T7JUOLGEE+oQ==
   dependencies:
     "@griffel/react" "^1.0.0"
     tslib "^2.1.0"
@@ -1313,10 +1321,10 @@
   dependencies:
     csstype "^3.1.3"
 
-"@headless-adminapp/app@^0.0.17-alpha.53":
-  version "0.0.17-alpha.53"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/app/-/app-0.0.17-alpha.53.tgz#01094c5ac0aa842320a2dc0bfa89e46d2bc0e155"
-  integrity sha512-52pWsIbaX3bwBPQppkJfecg6v3ZmWZrhqzgeUeNtYDZY7nnH+ZBswwVHjWENZJpR04xpolokZu2SXEh5IjbHaA==
+"@headless-adminapp/app@^0.0.17-alpha.59":
+  version "0.0.17-alpha.59"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/app/-/app-0.0.17-alpha.59.tgz#501bcde316f278563cf1d24b244cc15ccd3fdfdc"
+  integrity sha512-WDGj1+42DJ9NZVvVxB7jaoz5OpBtqxU4Q6xVju/Vmgq/rBAy2CArAoAiA3hOYKdELuf7ALP1284t9M3Vy7QgRg==
   dependencies:
     "@hookform/resolvers" "^3.9.0"
     "@tanstack/react-query" "5.51.1"
@@ -1324,24 +1332,25 @@
     dayjs "^1.11.13"
     exceljs "^4.4.0"
     json-to-csv-export "^2.1.1"
+    libphonenumber-js "1.11.20"
     lodash "^4.17.21"
     react-custom-scrollbars-2 "^4.5.0"
     react-hook-form "7.52.2"
     uuid "11.0.3"
     yup "^1.4.0"
 
-"@headless-adminapp/core@^0.0.17-alpha.53":
-  version "0.0.17-alpha.53"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/core/-/core-0.0.17-alpha.53.tgz#7eed6b714bd8a82dc77ccede449ea8b7a3111bb0"
-  integrity sha512-Z5zAzWDAcc1qliH2os8YeI/GbQItwDSk/lLMR7Mv95coGybhytdph54K1PcH0Nn7R29MClXVCsDQICuvgelDWQ==
+"@headless-adminapp/core@^0.0.17-alpha.59":
+  version "0.0.17-alpha.59"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/core/-/core-0.0.17-alpha.59.tgz#85b804cdd18e565e8c5c2f82f2288778c4d28dc8"
+  integrity sha512-kNfU6v+QRtF3ov7Z6IE3uykKvAqmKjFi/2gS8IzFi5vEaRKLLLj6HoPWRwehrpGB8eJL9d4HdPH3W1JgWedXxg==
   dependencies:
     "@tanstack/react-query" "5.51.1"
     uuid "11.0.3"
 
-"@headless-adminapp/fluent@^0.0.17-alpha.53":
-  version "0.0.17-alpha.53"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/fluent/-/fluent-0.0.17-alpha.53.tgz#3067448f715e874ff9a18d708e6804e8ae56bf4b"
-  integrity sha512-z6SVxNHgxpypo8gW7ZegGkHAd3FVm8PiOktwcwnZCDVKTp3uLax7HPbNJY+lRyl6+FH3bwp0s3K9vOU4yZ1CsA==
+"@headless-adminapp/fluent@^0.0.17-alpha.59":
+  version "0.0.17-alpha.59"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/fluent/-/fluent-0.0.17-alpha.59.tgz#fd59691a1ce0ec48b4c92f72a0586ea8fbd7ac58"
+  integrity sha512-xS1/ndwBbTrcVR8SlxB+4kghQmz22n3PKYRMx1jVLONk6Cm/5pXyOPAapsv6PZzk3igiPokHNek1UGaqHwhlDw==
   dependencies:
     "@fluentui/react-components" "9.54.4"
     "@fluentui/react-datepicker-compat" "0.4.43"
@@ -1364,32 +1373,33 @@
     uuid "11.0.3"
     yup "^1.4.0"
 
-"@headless-adminapp/icons-fluent@^0.0.17-alpha.53":
-  version "0.0.17-alpha.53"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/icons-fluent/-/icons-fluent-0.0.17-alpha.53.tgz#4ad65922e358d31da5bc0b13c53a9eb05c4824dc"
-  integrity sha512-iqudLAUvhrW+tf2eo4q+/FnWS33HkbRxVbe2sPrx+wF+VIzxnm6ZwHkvyyxzfa8TmisLO/MnE0S7gGYWSiq0AA==
+"@headless-adminapp/icons-fluent@^0.0.17-alpha.57":
+  version "0.0.17-alpha.57"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/icons-fluent/-/icons-fluent-0.0.17-alpha.57.tgz#6bc06f0b86dfaaa4cf8caf4f23a22e820c7971d1"
+  integrity sha512-lfamN80ul9zGQNAp9jVpDFMqUt1AoCDPETsC7J5rorvxHfwLdNvmKt7AI1/mAySNza3e1Pudpi/m+sVKSh5H1A==
   dependencies:
-    "@fluentui/react-icons" "^2.0.247"
+    "@fluentui/react-icons" "^2.0.274"
 
-"@headless-adminapp/icons@^0.0.17-alpha.53":
-  version "0.0.17-alpha.53"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/icons/-/icons-0.0.17-alpha.53.tgz#851ec87b3ddd44b7abc4c8911a372dc24c5813d9"
-  integrity sha512-qIVKaZRzy4x+a7mBp0UlA4kjJ8SUPcjS5N5yLdJS6IivaGi6Kvcv8R2IxtbVqPv77jbc0SxxvHH/0/T24FUAUA==
+"@headless-adminapp/icons@^0.0.17-alpha.56":
+  version "0.0.17-alpha.56"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/icons/-/icons-0.0.17-alpha.56.tgz#170805833fe1bec7d5b2df2f20061d363f190889"
+  integrity sha512-8TCsK/VIUgVJ3tWPYx8vdlpdloAaoO7SEb96+6OVb5RPdhezhNVJvjNQ9km0N5rmQbpmZbZeX1qdTvRUjsOoLQ==
   dependencies:
     clsx "2.1.1"
 
-"@headless-adminapp/server-sdk-sequelize@^0.0.17-alpha.53":
-  version "0.0.17-alpha.53"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/server-sdk-sequelize/-/server-sdk-sequelize-0.0.17-alpha.53.tgz#487ffd1f0a4b28edf2351d31b69ef57449318f92"
-  integrity sha512-u6nLw69aC6XaRUHJvj3Vzv/PN8QMOOSQp/iITN8dim2Nh6cxHJQlZ0MC6EkkisYfZ/Qln6vAWBaqKFrY08dxPg==
+"@headless-adminapp/server-sdk-sequelize@^0.0.17-alpha.57":
+  version "0.0.17-alpha.57"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/server-sdk-sequelize/-/server-sdk-sequelize-0.0.17-alpha.57.tgz#4a072b598a992094f1f62cdde1151833711f9513"
+  integrity sha512-xb9KkcUZQFFkMneIf/rmyWt19uNNoWUm0uiXOBlruLZ+mkoz80AOC9txD+nzOJ+OF7zhtBZVC04murb9VxhBbg==
   dependencies:
     dayjs "^1.11.13"
     sequelize "^6.37.3"
+    uuid "11.0.3"
 
-"@headless-adminapp/server-sdk@^0.0.17-alpha.53":
-  version "0.0.17-alpha.53"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/server-sdk/-/server-sdk-0.0.17-alpha.53.tgz#c96a192d1f8d4ca18e56c291da4e295a0e6e8b2e"
-  integrity sha512-lL8fKAgzsQ3kWKX33YOcxFPbFFPyPB7VjPcPXab6yrswKYKkOHGYa6OEnIYYimxh7iwOyzarXCxaHo9ppmvN5w==
+"@headless-adminapp/server-sdk@^0.0.17-alpha.57":
+  version "0.0.17-alpha.57"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/server-sdk/-/server-sdk-0.0.17-alpha.57.tgz#a0ba55e8eed8f5c24c1baed3e0b5786a01ccc82a"
+  integrity sha512-SFLoJDFIfJ9MY6Ky7CliOh6ne4aTOC6QCvsQYM072Cv5vvAkwG7MMvGr+APsr2W7NBYwzRwd+SecDjdNu/o8YQ==
 
 "@hookform/resolvers@^3.9.0":
   version "3.10.0"
@@ -3974,6 +3984,11 @@ levn@^0.4.1:
   dependencies:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
+
+libphonenumber-js@1.11.20:
+  version "1.11.20"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.11.20.tgz#ef5c663e80f55d9ea01a6e2952bf240e8a6fff52"
+  integrity sha512-/ipwAMvtSZRdiQBHqW1qxqeYiBMzncOQLVA+62MWYr7N4m7Q2jqpJ0WgT7zlOEOpyLRSqrMXidbJpC0J77AaKA==
 
 lie@~3.3.0:
   version "3.3.0"
