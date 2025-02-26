@@ -19,6 +19,7 @@ import { useRecordId } from '@headless-adminapp/app/dataform/hooks/useRecordId';
 import { Ticket } from '../schema/ticket';
 import { useGridRefresh } from '@headless-adminapp/app/datagrid/hooks';
 import { Agent } from '../schema/agent';
+import { EntityName } from '../enums';
 
 const SendIcon = bundleLazyIcon('Send24Regular', 'Send24Filled');
 
@@ -46,7 +47,7 @@ export function TicketMessages() {
     }
 
     const record = await dataService.retriveRecord<Ticket>(
-      'tickets',
+      EntityName.Ticket,
       recordId,
       ['subject', 'customer_id']
     );

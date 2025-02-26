@@ -1,5 +1,5 @@
 import { SequelizeSchemaStore } from '@headless-adminapp/server-sdk-sequelize';
-import { sequelize } from './sequelize';
+import { sequelize } from '../../../sequelize';
 
 import { ticketSchema } from '@/app//help-desk/config/schema/ticket';
 import { customerSchema } from '@/app//help-desk/config/schema/customer';

@@ -2,7 +2,7 @@ import { HttpError } from '@headless-adminapp/core/transport';
 import { NextRequest, NextResponse } from 'next/server';
 import { ExecuteParams, IServerSdk } from '@headless-adminapp/server-sdk';
 import { SequelizeServerSdk } from '@headless-adminapp/server-sdk-sequelize';
-import { schemaStore } from './config';
+import { schemaStore } from '@/app/service-booking/config/server/schemaStore';
 import { sequelize } from '../../sequelize';
 
 export async function POST(req: NextRequest) {

@@ -1,11 +1,12 @@
 import { faker } from '@faker-js/faker';
 import { schemaStore } from '../config/schemaStore';
-import { sequelize } from '../config/sequelize';
 import { Ticket } from '@/app/help-desk/config/schema/ticket';
 import { Message } from '@/app/help-desk/config/schema/message';
 import { Customer } from '@/app/help-desk/config/schema/customer';
 import { Product } from '@/app/help-desk/config/schema/product';
 import { Agent } from '@/app/help-desk/config/schema/agent';
+import { Appointment } from '@/app/service-booking/config/schema/appointment';
+import { EntityName } from '@/app/help-desk/config/enums';
 
 faker.seed(1);
 
@@ -517,13 +518,11 @@ let generated = false;
 let generatingPromise: Promise<void> | null = null;
 
 async function prepareMockDataInternal() {
-  await sequelize.sync();
-
-  await schemaStore.getModel('products').bulkCreate(products);
-  await schemaStore.getModel('agents').bulkCreate(agents);
-  await schemaStore.getModel('customers').bulkCreate(customers);
-  await schemaStore.getModel('tickets').bulkCreate(tickets);
-  await schemaStore.getModel('messages').bulkCreate(messages);
+  await schemaStore.getModel(EntityName.Product).bulkCreate(products);
+  await schemaStore.getModel(EntityName.Agent).bulkCreate(agents);
+  await schemaStore.getModel(EntityName.Customer).bulkCreate(customers);
+  await schemaStore.getModel(EntityName.Ticket).bulkCreate(tickets);
+  await schemaStore.getModel(EntityName.Message).bulkCreate(messages);
 }
 
 async function prepareMockData() {
@@ -542,7 +541,6 @@ async function prepareMockData() {
 }
 
 export async function resetMockData() {
-  await sequelize.sync({ force: true });
   generated = false;
   generatingPromise = null;
 

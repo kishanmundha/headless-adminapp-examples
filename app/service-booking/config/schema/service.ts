@@ -2,13 +2,13 @@ import { InferredSchemaType } from '@headless-adminapp/core/schema';
 import { defineSchema } from '@headless-adminapp/core/schema/utils';
 import { EntityName } from '../enums';
 
-export const productSchema = defineSchema({
-  logicalName: EntityName.Product,
-  collectionName: 'hd_products',
-  label: 'Product',
-  pluralLabel: 'Products',
+export const serviceSchema = defineSchema({
+  logicalName: EntityName.Service,
+  collectionName: 'sb_services',
+  label: 'Service',
+  pluralLabel: 'Services',
   idAttribute: 'id',
-  primaryAttribute: 'model',
+  primaryAttribute: 'name',
   createdAtAttribute: 'createdAt',
   updatedAtAttribute: 'updatedAt',
   ownership: 'scoped',
@@ -20,7 +20,7 @@ export const productSchema = defineSchema({
       readonly: true,
       guid: true,
     },
-    model: {
+    name: {
       type: 'string',
       format: 'text',
       label: 'Name',
@@ -37,23 +37,9 @@ export const productSchema = defineSchema({
       label: 'Updated At',
       readonly: true,
     },
-    tickets: {
-      type: 'number',
-      format: 'integer',
-      label: 'Tickets',
-      required: true,
-      default: 0,
-    },
-    customers: {
-      type: 'number',
-      format: 'integer',
-      label: 'Customers',
-      required: true,
-      default: 0,
-    },
   },
 });
 
-export type ProductAttributes = (typeof productSchema)['attributes'];
+export type ServiceAttributes = (typeof serviceSchema)['attributes'];
 
-export type Product = InferredSchemaType<ProductAttributes>;
+export type Service = InferredSchemaType<ServiceAttributes>;

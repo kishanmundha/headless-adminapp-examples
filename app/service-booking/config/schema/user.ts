@@ -2,16 +2,16 @@ import { InferredSchemaType } from '@headless-adminapp/core/schema';
 import { defineSchema } from '@headless-adminapp/core/schema/utils';
 import { EntityName } from '../enums';
 
-export const productSchema = defineSchema({
-  logicalName: EntityName.Product,
-  collectionName: 'hd_products',
-  label: 'Product',
-  pluralLabel: 'Products',
+export const userSchema = defineSchema({
+  logicalName: EntityName.User,
+  collectionName: 'sb_users',
+  label: 'User',
+  pluralLabel: 'Users',
   idAttribute: 'id',
-  primaryAttribute: 'model',
+  primaryAttribute: 'fullName',
   createdAtAttribute: 'createdAt',
   updatedAtAttribute: 'updatedAt',
-  ownership: 'scoped',
+  ownership: 'global',
   attributes: {
     id: {
       type: 'id',
@@ -20,10 +20,20 @@ export const productSchema = defineSchema({
       readonly: true,
       guid: true,
     },
-    model: {
+    fullName: {
       type: 'string',
       format: 'text',
       label: 'Name',
+    },
+    firstName: {
+      type: 'string',
+      format: 'text',
+      label: 'First Name',
+    },
+    lastName: {
+      type: 'string',
+      format: 'text',
+      label: 'Last Name',
     },
     createdAt: {
       type: 'date',
@@ -37,23 +47,19 @@ export const productSchema = defineSchema({
       label: 'Updated At',
       readonly: true,
     },
-    tickets: {
-      type: 'number',
-      format: 'integer',
-      label: 'Tickets',
-      required: true,
-      default: 0,
+    email: {
+      type: 'string',
+      format: 'email',
+      label: 'Email',
     },
-    customers: {
-      type: 'number',
-      format: 'integer',
-      label: 'Customers',
-      required: true,
-      default: 0,
+    avatar: {
+      type: 'attachment',
+      format: 'image',
+      label: 'Avatar',
     },
   },
 });
 
-export type ProductAttributes = (typeof productSchema)['attributes'];
+export type UserAttributes = (typeof userSchema)['attributes'];
 
-export type Product = InferredSchemaType<ProductAttributes>;
+export type User = InferredSchemaType<UserAttributes>;

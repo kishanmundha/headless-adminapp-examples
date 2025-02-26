@@ -1,8 +1,10 @@
 import { InferredSchemaType } from '@headless-adminapp/core/schema';
 import { defineSchema } from '@headless-adminapp/core/schema/utils';
+import { EntityName } from '../enums';
 
 export const agentSchema = defineSchema({
-  logicalName: 'agents',
+  logicalName: EntityName.Agent,
+  collectionName: 'hd_agents',
   label: 'Agent',
   pluralLabel: 'Agents',
   idAttribute: 'id',

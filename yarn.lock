@@ -241,6 +241,21 @@
     "@griffel/react" "^1.5.22"
     "@swc/helpers" "^0.5.1"
 
+"@fluentui/react-calendar-compat@0.1.20":
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/@fluentui/react-calendar-compat/-/react-calendar-compat-0.1.20.tgz#520a591f584140f5d74013c45d8578129122fb25"
+  integrity sha512-kK+G+hOwaBSAc12OaBLtcmv8SfwOC65REjtJxjOQXf3fZLThWAQgQUKlFiSG5UtO2wUCYt5TFrpsV8SKoJl9MQ==
+  dependencies:
+    "@fluentui/keyboard-keys" "^9.0.7"
+    "@fluentui/react-icons" "^2.0.245"
+    "@fluentui/react-jsx-runtime" "^9.0.45"
+    "@fluentui/react-shared-contexts" "^9.20.2"
+    "@fluentui/react-tabster" "^9.22.9"
+    "@fluentui/react-theme" "^9.1.21"
+    "@fluentui/react-utilities" "^9.18.16"
+    "@griffel/react" "^1.5.22"
+    "@swc/helpers" "^0.5.1"
+
 "@fluentui/react-calendar-compat@^0.1.12":
   version "0.1.26"
   resolved "https://registry.yarnpkg.com/@fluentui/react-calendar-compat/-/react-calendar-compat-0.1.26.tgz#3c8d7718f6a0adabd453b563eac72af95d9d82d7"
@@ -583,21 +598,21 @@
     "@swc/helpers" "^0.5.1"
     react-is "^17.0.2"
 
+"@fluentui/react-jsx-runtime@^9.0.45", "@fluentui/react-jsx-runtime@^9.0.50":
+  version "9.0.50"
+  resolved "https://registry.yarnpkg.com/@fluentui/react-jsx-runtime/-/react-jsx-runtime-9.0.50.tgz#cabd038f78cc11593e5d0bcdeaf609574b6b0592"
+  integrity sha512-dnelPmz0x591tr58B/jbIHVzgjWskMkBmWEvZJc2rlbGH1oZl+MPJqvVdOAMvLTKJzqVmNkeSDtQmkjzjccogA==
+  dependencies:
+    "@fluentui/react-utilities" "^9.18.20"
+    "@swc/helpers" "^0.5.1"
+    react-is "^17.0.2"
+
 "@fluentui/react-jsx-runtime@^9.0.49":
   version "9.0.49"
   resolved "https://registry.yarnpkg.com/@fluentui/react-jsx-runtime/-/react-jsx-runtime-9.0.49.tgz#42f7356e1ac2e0b1484f44d6c6dee99f19727153"
   integrity sha512-/ALjAanMoC+kLsQvbK1u5YncXa36OvFiLtPqQMKwagMHIHIFwdVYYkAR34hhqzDQniv05kOfHVTrzDzsi25pxw==
   dependencies:
     "@fluentui/react-utilities" "^9.18.19"
-    "@swc/helpers" "^0.5.1"
-    react-is "^17.0.2"
-
-"@fluentui/react-jsx-runtime@^9.0.50":
-  version "9.0.50"
-  resolved "https://registry.yarnpkg.com/@fluentui/react-jsx-runtime/-/react-jsx-runtime-9.0.50.tgz#cabd038f78cc11593e5d0bcdeaf609574b6b0592"
-  integrity sha512-dnelPmz0x591tr58B/jbIHVzgjWskMkBmWEvZJc2rlbGH1oZl+MPJqvVdOAMvLTKJzqVmNkeSDtQmkjzjccogA==
-  dependencies:
-    "@fluentui/react-utilities" "^9.18.20"
     "@swc/helpers" "^0.5.1"
     react-is "^17.0.2"
 
@@ -888,7 +903,7 @@
     "@griffel/react" "^1.5.22"
     "@swc/helpers" "^0.5.1"
 
-"@fluentui/react-shared-contexts@^9.19.0", "@fluentui/react-shared-contexts@^9.21.2":
+"@fluentui/react-shared-contexts@^9.19.0", "@fluentui/react-shared-contexts@^9.20.2", "@fluentui/react-shared-contexts@^9.21.2":
   version "9.21.2"
   resolved "https://registry.yarnpkg.com/@fluentui/react-shared-contexts/-/react-shared-contexts-9.21.2.tgz#f2a5c92bab806bc54cabadc345f98d0cb5fe84ad"
   integrity sha512-5hw9CfCmKaEbxmFi+ZF4EZzYWFKrfRLq9pXFIoJWprP1D3ZAds/ymtIOG/CsJzig8zQ1LQ3cNSUzNB75XWg6IQ==
@@ -1030,6 +1045,19 @@
     keyborg "^2.6.0"
     tabster "^8.2.0"
 
+"@fluentui/react-tabster@^9.22.9":
+  version "9.24.0"
+  resolved "https://registry.yarnpkg.com/@fluentui/react-tabster/-/react-tabster-9.24.0.tgz#cbeee1bc43c713c35989fe5959d504b6f380f2d1"
+  integrity sha512-/O0/zXGUpZwYwcF7hPu/xcV32+A2NfkBHf6UoEze3a6meBj2mC+MEnPcqCnBAOu50GzorFLtLihWHRJGGq9YVA==
+  dependencies:
+    "@fluentui/react-shared-contexts" "^9.21.2"
+    "@fluentui/react-theme" "^9.1.24"
+    "@fluentui/react-utilities" "^9.18.20"
+    "@griffel/react" "^1.5.22"
+    "@swc/helpers" "^0.5.1"
+    keyborg "^2.6.0"
+    tabster "^8.5.0"
+
 "@fluentui/react-tabster@^9.23.3":
   version "9.23.3"
   resolved "https://registry.yarnpkg.com/@fluentui/react-tabster/-/react-tabster-9.23.3.tgz#364d907ccfff0853ef107e15303788e531b719a4"
@@ -1126,7 +1154,7 @@
     "@griffel/react" "^1.5.22"
     "@swc/helpers" "^0.5.1"
 
-"@fluentui/react-theme@^9.1.19", "@fluentui/react-theme@^9.1.24":
+"@fluentui/react-theme@^9.1.19", "@fluentui/react-theme@^9.1.21", "@fluentui/react-theme@^9.1.24":
   version "9.1.24"
   resolved "https://registry.yarnpkg.com/@fluentui/react-theme/-/react-theme-9.1.24.tgz#8ad614df32a60278719a073ea7e308f5016aae34"
   integrity sha512-OhVKYD7CMYHxzJEn4PtIszledj8hbQJNWBMfIZsp4Sytdp9vCi0txIQUx4BhS1WqtQPhNGCF16eW9Q3NRrnIrQ==
@@ -1233,7 +1261,7 @@
     "@fluentui/react-shared-contexts" "^9.21.2"
     "@swc/helpers" "^0.5.1"
 
-"@fluentui/react-utilities@^9.18.20":
+"@fluentui/react-utilities@^9.18.16", "@fluentui/react-utilities@^9.18.20":
   version "9.18.20"
   resolved "https://registry.yarnpkg.com/@fluentui/react-utilities/-/react-utilities-9.18.20.tgz#0522abaf14946b0cd1b6eda3ed33749e3c3d989d"
   integrity sha512-4uIgf4e4yP1HWAQapFQKNN88+L88NqbzXyQPf+NWE9lmP5xRyyMePKRX7i4PcJFdSt7lN4BYvwUxJ7DkQ/Npnw==
@@ -1260,29 +1288,29 @@
   dependencies:
     "@swc/helpers" "^0.5.1"
 
-"@fullcalendar/core@^6.1.15":
+"@fullcalendar/core@6.1.15", "@fullcalendar/core@^6.1.15":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-6.1.15.tgz#6c3f5259fc4589870228853072131219bb533f6e"
   integrity sha512-BuX7o6ALpLb84cMw1FCB9/cSgF4JbVO894cjJZ6kP74jzbUZNjtwffwRdA+Id8rrLjT30d/7TrkW90k4zbXB5Q==
   dependencies:
     preact "~10.12.1"
 
-"@fullcalendar/daygrid@^6.1.15", "@fullcalendar/daygrid@~6.1.15":
+"@fullcalendar/daygrid@6.1.15", "@fullcalendar/daygrid@^6.1.15", "@fullcalendar/daygrid@~6.1.15":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-6.1.15.tgz#91208b0955ba805ddad285a53ee6f53855146963"
   integrity sha512-j8tL0HhfiVsdtOCLfzK2J0RtSkiad3BYYemwQKq512cx6btz6ZZ2RNc/hVnIxluuWFyvx5sXZwoeTJsFSFTEFA==
 
-"@fullcalendar/interaction@^6.1.15":
+"@fullcalendar/interaction@6.1.15", "@fullcalendar/interaction@^6.1.15":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-6.1.15.tgz#1c685d5c269388d4877b75ab2185e97d7c386cc7"
   integrity sha512-DOTSkofizM7QItjgu7W68TvKKvN9PSEEvDJceyMbQDvlXHa7pm/WAVtAc6xSDZ9xmB1QramYoWGLHkCYbTW1rQ==
 
-"@fullcalendar/react@^6.1.15":
+"@fullcalendar/react@6.1.15", "@fullcalendar/react@^6.1.15":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@fullcalendar/react/-/react-6.1.15.tgz#3198b4a64e256afd37c9760c8741a9af89ade894"
   integrity sha512-L0b9hybS2J4e7lq6G2CD4nqriyLEqOH1tE8iI6JQjAMTVh5JicOo5Mqw+fhU5bJ7hLfMw2K3fksxX3Ul1ssw5w==
 
-"@fullcalendar/timegrid@^6.1.15":
+"@fullcalendar/timegrid@6.1.15", "@fullcalendar/timegrid@^6.1.15":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@fullcalendar/timegrid/-/timegrid-6.1.15.tgz#c4630b7c03c813065154c6e3981f8d51d9d692e5"
   integrity sha512-61ORr3A148RtxQ2FNG7JKvacyA/TEVZ7z6I+3E9Oeu3dqTf6M928bFcpehRTIK6zIA6Yifs7BeWHgOE9dFnpbw==
@@ -1316,10 +1344,10 @@
   dependencies:
     csstype "^3.1.3"
 
-"@headless-adminapp/app@^0.0.17-alpha.59":
-  version "0.0.17-alpha.59"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/app/-/app-0.0.17-alpha.59.tgz#501bcde316f278563cf1d24b244cc15ccd3fdfdc"
-  integrity sha512-WDGj1+42DJ9NZVvVxB7jaoz5OpBtqxU4Q6xVju/Vmgq/rBAy2CArAoAiA3hOYKdELuf7ALP1284t9M3Vy7QgRg==
+"@headless-adminapp/app@^0.0.17-alpha.65":
+  version "0.0.17-alpha.65"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/app/-/app-0.0.17-alpha.65.tgz#696bdfcf703ad3eff853af2f2a1add2020352fff"
+  integrity sha512-dP82sho9YceafQN4CVTogTHqMiIBuz6RnZVjFimg6tSLIRFmfVfAY5GNYke5K87ng5wT5zmJXqfVPsT5kbDHIQ==
   dependencies:
     "@hookform/resolvers" "^3.9.0"
     "@tanstack/react-query" "5.51.1"
@@ -1334,23 +1362,29 @@
     uuid "11.0.3"
     yup "^1.4.0"
 
-"@headless-adminapp/core@^0.0.17-alpha.59":
-  version "0.0.17-alpha.59"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/core/-/core-0.0.17-alpha.59.tgz#85b804cdd18e565e8c5c2f82f2288778c4d28dc8"
-  integrity sha512-kNfU6v+QRtF3ov7Z6IE3uykKvAqmKjFi/2gS8IzFi5vEaRKLLLj6HoPWRwehrpGB8eJL9d4HdPH3W1JgWedXxg==
+"@headless-adminapp/core@^0.0.17-alpha.65":
+  version "0.0.17-alpha.65"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/core/-/core-0.0.17-alpha.65.tgz#fe2d715de12c3fb3d0eb9f1e90f43885ffada55f"
+  integrity sha512-95xQ2IC7bFrag5wFXqXJPSnEn9WNTRHitOmwichHZxO9LNOrxwv79elYYEvzckgZXCvTpTUFDGZDB3LbG1OK8w==
   dependencies:
     "@tanstack/react-query" "5.51.1"
     uuid "11.0.3"
 
-"@headless-adminapp/fluent@^0.0.17-alpha.59":
-  version "0.0.17-alpha.59"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/fluent/-/fluent-0.0.17-alpha.59.tgz#fd59691a1ce0ec48b4c92f72a0586ea8fbd7ac58"
-  integrity sha512-xS1/ndwBbTrcVR8SlxB+4kghQmz22n3PKYRMx1jVLONk6Cm/5pXyOPAapsv6PZzk3igiPokHNek1UGaqHwhlDw==
+"@headless-adminapp/fluent@^0.0.17-alpha.65":
+  version "0.0.17-alpha.65"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/fluent/-/fluent-0.0.17-alpha.65.tgz#3e293252a2050af984159a12ab9dc746c7b5f775"
+  integrity sha512-j49D+NKa3Y0GDPh9cjKG+g27/ddz/9Xn/m3t00GWVA+BP5Z2cg8WVrRncW3bbF57k4427NR+2oNMoSxEoy3hHA==
   dependencies:
+    "@fluentui/react-calendar-compat" "0.1.20"
     "@fluentui/react-components" "9.54.4"
     "@fluentui/react-datepicker-compat" "0.4.43"
     "@fluentui/react-nav-preview" "0.5.1"
     "@fluentui/react-timepicker-compat" "0.2.46"
+    "@fullcalendar/core" "6.1.15"
+    "@fullcalendar/daygrid" "6.1.15"
+    "@fullcalendar/interaction" "6.1.15"
+    "@fullcalendar/react" "6.1.15"
+    "@fullcalendar/timegrid" "6.1.15"
     "@hookform/resolvers" "^3.9.0"
     "@tanstack/react-query" "5.51.1"
     "@tanstack/react-table" "^8.20.1"
@@ -1368,10 +1402,10 @@
     uuid "11.0.3"
     yup "^1.4.0"
 
-"@headless-adminapp/icons-fluent@^0.0.17-alpha.57":
-  version "0.0.17-alpha.57"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/icons-fluent/-/icons-fluent-0.0.17-alpha.57.tgz#6bc06f0b86dfaaa4cf8caf4f23a22e820c7971d1"
-  integrity sha512-lfamN80ul9zGQNAp9jVpDFMqUt1AoCDPETsC7J5rorvxHfwLdNvmKt7AI1/mAySNza3e1Pudpi/m+sVKSh5H1A==
+"@headless-adminapp/icons-fluent@^0.0.17-alpha.65":
+  version "0.0.17-alpha.65"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/icons-fluent/-/icons-fluent-0.0.17-alpha.65.tgz#976c56d4ac47ab0b870ae44392875141e0509489"
+  integrity sha512-adrvJEjiWWeP4Mowbq+6Z96UD/G1iZDfDT0tep3hfJbgx99dqZEqXjj9pCoVZyklY2A123utRSbLyH7xvm5lUA==
   dependencies:
     "@fluentui/react-icons" "^2.0.274"
 
@@ -1382,10 +1416,10 @@
   dependencies:
     clsx "2.1.1"
 
-"@headless-adminapp/server-sdk-sequelize@^0.0.17-alpha.60":
-  version "0.0.17-alpha.60"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/server-sdk-sequelize/-/server-sdk-sequelize-0.0.17-alpha.60.tgz#5dcfb884bbf9bf1d8cc1927938a1331ce0f34378"
-  integrity sha512-6fkXwKG18VGFv5RJ8uzky0x9YKhGC7LAedTctypWJiAbl67JYajUviOybnZHaWdLblxNskjyhxv2boKjGUrzIg==
+"@headless-adminapp/server-sdk-sequelize@^0.0.17-alpha.65":
+  version "0.0.17-alpha.65"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/server-sdk-sequelize/-/server-sdk-sequelize-0.0.17-alpha.65.tgz#47ebfb454dd010f2bef701dc132df88a03751b5b"
+  integrity sha512-91YF49PjXdsjL6bV4T+th64u5XRQ6ZLvBKHzuTm1kijvn3vgCg74tKyUD59hw7GFmU574b9J5jm4wGdEZwSypg==
   dependencies:
     dayjs "^1.11.13"
     sequelize "^6.37.3"
@@ -4946,6 +4980,14 @@ tabster@^8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/tabster/-/tabster-8.2.0.tgz#474b32af394495b0835d4eceeab6594f276486d0"
   integrity sha512-Gvplk/Yl/12aVFA6FPOqGcq31Qv8hbPfYO0N+6IxrRgRT6eSLsipT6gkZBYjyOwGsp6BD5XlZAuJgupfG/GHoA==
+  dependencies:
+    keyborg "2.6.0"
+    tslib "^2.3.1"
+
+tabster@^8.5.0:
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/tabster/-/tabster-8.5.0.tgz#ec7a7d2f5965e60d60e68215893e1965abe81156"
+  integrity sha512-ePkJm9nycgh4MeW2yXY6QBa4btvwfb4h6+i1uYRAzRxQVf/AJMpN4mHooZKQceM4yQkCjfNibfGtC6DnPmo9vQ==
   dependencies:
     keyborg "2.6.0"
     tslib "^2.3.1"

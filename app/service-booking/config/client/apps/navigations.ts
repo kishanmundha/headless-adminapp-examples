@@ -1,29 +1,31 @@
+import { iconSet } from '@headless-adminapp/icons-fluent';
 import {
   NavPageGroupArea,
   PageType,
 } from '@headless-adminapp/core/experience/app';
-import { bundleLazyIcon } from '@headless-adminapp/icons-fluent/lazyIcon';
-import { EntityName } from '../enums';
-
-const BoardIcon = bundleLazyIcon('Board24Regular', 'Board24Filled');
+import { EntityName } from '../../enums';
 
 export const navPageGroupAreas: NavPageGroupArea[] = [
   {
     label: 'Main',
     groups: [
       {
-        label: 'Data',
-        hideLabel: true,
+        label: 'Calendar',
         items: [
           {
             type: PageType.Custom,
-            label: 'Board',
-            link: '/board',
-            icon: BoardIcon,
+            label: 'Calendar',
+            link: 'calendar',
+            icon: iconSet.Calendar,
           },
+        ],
+      },
+      {
+        label: 'Data',
+        items: [
           {
             type: PageType.EntityView,
-            logicalName: EntityName.Ticket,
+            logicalName: EntityName.Appointment,
           },
           {
             type: PageType.EntityView,
@@ -31,7 +33,7 @@ export const navPageGroupAreas: NavPageGroupArea[] = [
           },
           {
             type: PageType.EntityView,
-            logicalName: EntityName.Product,
+            logicalName: EntityName.Service,
           },
         ],
       },

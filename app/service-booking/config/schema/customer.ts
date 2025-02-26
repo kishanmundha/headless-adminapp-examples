@@ -4,7 +4,7 @@ import { EntityName } from '../enums';
 
 export const customerSchema = defineSchema({
   logicalName: EntityName.Customer,
-  collectionName: 'hd_customers',
+  collectionName: 'sb_customers',
   label: 'Customer',
   pluralLabel: 'Customers',
   idAttribute: 'id',
@@ -58,12 +58,6 @@ export const customerSchema = defineSchema({
       label: 'Updated At',
       readonly: true,
     },
-    product_id: {
-      type: 'lookup',
-      guid: true,
-      label: 'Product',
-      entity: EntityName.Product,
-    },
     phone: {
       type: 'string',
       format: 'phone',
@@ -88,18 +82,6 @@ export const customerSchema = defineSchema({
       type: 'string',
       format: 'text',
       label: 'State',
-    },
-    tickets: {
-      type: 'number',
-      format: 'integer',
-      label: 'Tickets',
-      required: true,
-    },
-    openTickets: {
-      type: 'number',
-      format: 'integer',
-      label: 'Open Tickets',
-      required: true,
     },
   },
 });

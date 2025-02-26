@@ -1,12 +1,12 @@
 import { HttpError } from '@headless-adminapp/core/transport';
 import { NextResponse } from 'next/server';
-import { resetMockData } from '../data/mockdata/generator';
+import { resetData } from './resetData';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    await resetMockData();
+    await resetData();
 
     return NextResponse.json({
       message: 'Data reset successfully',

@@ -1,6 +1,7 @@
 import { SchemaExperienceBuilder } from '@headless-adminapp/app/builders';
 import { productSchema } from '../schema/product';
 import { bundleLazyIcon } from '@headless-adminapp/icons-fluent/lazyIcon';
+import { EntityName } from '../enums';
 
 const ProductIcon = bundleLazyIcon('Production24Regular', 'Production24Filled');
 
@@ -80,7 +81,7 @@ export const productSchemaExperience = builder.defineExperience({
                     controls: [
                       {
                         type: 'subgrid',
-                        logicalName: 'customers',
+                        logicalName: EntityName.Customer,
                         associatedAttribute: 'product_id',
                         viewId: 'default',
                         label: 'Customers',

@@ -1,8 +1,10 @@
 import { InferredSchemaType } from '@headless-adminapp/core/schema';
 import { defineSchema } from '@headless-adminapp/core/schema/utils';
+import { EntityName } from '../enums';
 
 export const ticketSchema = defineSchema({
-  logicalName: 'tickets',
+  logicalName: EntityName.Ticket,
+  collectionName: 'hd_tickets',
   label: 'Ticket',
   pluralLabel: 'Tickets',
   idAttribute: 'id',
@@ -61,21 +63,21 @@ export const ticketSchema = defineSchema({
       type: 'lookup',
       guid: true,
       label: 'Customer',
-      entity: 'customers',
+      entity: EntityName.Customer,
       searchable: true,
     },
     product_id: {
       type: 'lookup',
       guid: true,
       label: 'Product',
-      entity: 'products',
+      entity: EntityName.Product,
       searchable: true,
     },
     agent_id: {
       type: 'lookup',
       guid: true,
       label: 'Agent',
-      entity: 'agents',
+      entity: EntityName.Agent,
       searchable: true,
     },
     messages: {

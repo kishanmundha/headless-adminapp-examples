@@ -22,6 +22,7 @@ import { useOpenForm } from '@headless-adminapp/app/navigation/hooks';
 
 import { getAttributeFormattedValue } from '@headless-adminapp/app/utils';
 import { isColorDark } from '@headless-adminapp/app/utils/color';
+import { EntityName } from '../config/enums';
 
 const CalenderIcon = bundleLazyIcon('Calendar24Regular', 'Calendar24Filled');
 const ChatIcon = bundleLazyIcon('Chat24Regular', 'Chat24Filled');
@@ -84,7 +85,7 @@ export const RecordItem: FC<RecordItemProps> = ({ record }) => {
               icon={<OpenIcon size={20} />}
               onClick={() => {
                 openForm({
-                  logicalName: 'tickets',
+                  logicalName: EntityName.Ticket,
                   id: record.id,
                 });
               }}

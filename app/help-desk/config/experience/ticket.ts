@@ -3,6 +3,7 @@ import { ticketSchema } from '../schema/ticket';
 import { componentStore } from '@headless-adminapp/fluent/componentStore';
 import { TicketMessages } from './TicketMessages';
 import { bundleLazyIcon } from '@headless-adminapp/icons-fluent/lazyIcon';
+import { EntityName } from '../enums';
 
 componentStore.registerComponent('TicketMessages', TicketMessages);
 
@@ -169,7 +170,7 @@ export const ticketSchemaExperience = builder.defineExperience({
                     controls: [
                       {
                         type: 'subgrid',
-                        logicalName: 'messages',
+                        logicalName: EntityName.Message,
                         associatedAttribute: 'ticket_id',
                         viewId: 'default',
                         component: 'TicketMessages',
