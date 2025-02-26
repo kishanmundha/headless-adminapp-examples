@@ -5,7 +5,6 @@ import { Message } from '@/app/help-desk/config/schema/message';
 import { Customer } from '@/app/help-desk/config/schema/customer';
 import { Product } from '@/app/help-desk/config/schema/product';
 import { Agent } from '@/app/help-desk/config/schema/agent';
-import { Appointment } from '@/app/service-booking/config/schema/appointment';
 import { EntityName } from '@/app/help-desk/config/enums';
 
 faker.seed(1);
