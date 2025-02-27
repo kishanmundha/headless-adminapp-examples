@@ -1162,7 +1162,7 @@
     "@fluentui/tokens" "1.0.0-alpha.21"
     "@swc/helpers" "^0.5.1"
 
-"@fluentui/react-timepicker-compat@0.2.46", "@fluentui/react-timepicker-compat@^0.2.46":
+"@fluentui/react-timepicker-compat@0.2.46":
   version "0.2.46"
   resolved "https://registry.yarnpkg.com/@fluentui/react-timepicker-compat/-/react-timepicker-compat-0.2.46.tgz#9df3f888d437a4a13b9e58412a362902f58f6eb1"
   integrity sha512-CM6KfUPWlpZqgnwgJ2YLmhA5iW2z6iEdhGS/sOWl9+jZr2AtwWdowULxqx8/PErn3TYRwjA8zzc9LDSFtWGt5w==

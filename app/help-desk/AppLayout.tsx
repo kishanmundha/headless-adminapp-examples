@@ -46,6 +46,9 @@ export default function AppLayout({ children }: PropsWithChildren) {
       }}
       authProps={{
         sessionResolver,
+        onUnauthenticated: () => {
+          router.replace('/')
+        }
       }}
     >
       <App appId="default">{children}</App>

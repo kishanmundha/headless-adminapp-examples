@@ -13,6 +13,8 @@ const nextConfig = {
       config.externals = [
         '@tanstack/react-query',
         '@fluentui/react-components',
+        '@fluentui/react-datepicker-compat',
+        '@fluentui/react-timepicker-compat',
         ...config.externals,
       ];
     }
@@ -21,6 +23,12 @@ const nextConfig = {
     );
     config.resolve.alias['@fluentui/react-components'] = path.resolve(
       './node_modules/@fluentui/react-components'
+    );
+    config.resolve.alias['@fluentui/react-datepicker-compat'] = path.resolve(
+      './node_modules/@fluentui/react-datepicker-compat'
+    );
+    config.resolve.alias['@fluentui/react-timepicker-compat'] = path.resolve(
+      './node_modules/@fluentui/react-timepicker-compat'
     );
 
     return config;
