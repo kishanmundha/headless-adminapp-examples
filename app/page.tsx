@@ -6,14 +6,18 @@ import {
   Subtitle2,
   Title1,
   tokens,
+  webLightTheme,
+  webDarkTheme,
 } from '@fluentui/react-components';
 import { useSystemColorScheme } from '@headless-adminapp/app/hooks/useSystemColorScheme';
-import { webLightTheme, webDarkTheme } from '@fluentui/react-components';
 import Image from 'next/image';
 import { FC } from 'react';
 import dynamic from 'next/dynamic';
 
-const FluentProvider = dynamic(() => import("@fluentui/react-components").then(mod => mod.FluentProvider), { ssr: false });
+const FluentProvider = dynamic(
+  () => import('@fluentui/react-components').then((mod) => mod.FluentProvider),
+  { ssr: false }
+);
 
 export default function Home() {
   const systemColorScheme = useSystemColorScheme();
@@ -27,6 +31,8 @@ export default function Home() {
           flexDirection: 'column',
           gap: tokens.spacingVerticalM,
           padding: tokens.spacingVerticalM,
+          width: '100vw',
+          height: '100vh',
         }}
       >
         <div
@@ -38,9 +44,11 @@ export default function Home() {
           }}
         >
           <Title1>Headless AdminApp</Title1>
-            <Body1>
-            Welcome to the Headless AdminApp demo. This project showcases a set of components and design patterns for creating admin applications efficiently.
-            </Body1>
+          <Body1>
+            Welcome to the Headless AdminApp demo. This project showcases a set
+            of components and design patterns for creating admin applications
+            efficiently.
+          </Body1>
           <Body1>
             <Link href="https://headless-adminapp.github.io/">
               Documentation
@@ -64,6 +72,7 @@ export default function Home() {
               display: 'flex',
               flexDirection: 'row',
               gap: tokens.spacingVerticalM,
+              flexWrap: 'wrap',
             }}
           >
             <FeatureItem
@@ -91,6 +100,7 @@ export default function Home() {
               display: 'flex',
               flexDirection: 'row',
               gap: tokens.spacingVerticalM,
+              flexWrap: 'wrap',
             }}
           >
             <FeatureItem

@@ -1,4 +1,5 @@
 import Script from 'next/script';
+import './styles.css';
 
 export const metadata = {
   title: 'Headless AdminApp',
