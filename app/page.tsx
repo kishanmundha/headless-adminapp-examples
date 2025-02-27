@@ -2,7 +2,6 @@
 
 import {
   Body1,
-  FluentProvider,
   Link,
   Subtitle2,
   Title1,
@@ -12,6 +11,9 @@ import { useSystemColorScheme } from '@headless-adminapp/app/hooks/useSystemColo
 import { webLightTheme, webDarkTheme } from '@fluentui/react-components';
 import Image from 'next/image';
 import { FC } from 'react';
+import dynamic from 'next/dynamic';
+
+const FluentProvider = dynamic(() => import("@fluentui/react-components").then(mod => mod.FluentProvider), { ssr: false });
 
 export default function Home() {
   const systemColorScheme = useSystemColorScheme();
@@ -64,12 +66,12 @@ export default function Home() {
               gap: tokens.spacingVerticalM,
             }}
           >
-            <Test
+            <FeatureItem
               href="/help-desk"
               image="/screenshots/board.png"
               title="Help Desk"
             />
-            <Test
+            <FeatureItem
               href="/service-booking"
               image="/screenshots/calendar.png"
               title="Service Booking"
@@ -91,22 +93,22 @@ export default function Home() {
               gap: tokens.spacingVerticalM,
             }}
           >
-            <Test
+            <FeatureItem
               href="/help-desk/board"
               image="/screenshots/board.png"
               title="Board"
             />
-            <Test
+            <FeatureItem
               href="/help-desk/data/ticets"
               image="/screenshots/datagrid.png"
               title="Data Listing"
             />
-            <Test
+            <FeatureItem
               href="/help-desk/data/tickets/85b02bfe-e221-48e8-bc3d-2068f1416485"
               image="/screenshots/form.png"
               title="Data Form"
             />
-            <Test
+            <FeatureItem
               href="/service-booking/calendar"
               image="/screenshots/calendar.png"
               title="Calendar"
@@ -118,13 +120,13 @@ export default function Home() {
   );
 }
 
-interface TestProps {
+interface FeatureItemProps {
   href: string;
   title: string;
   image: string;
 }
 
-const Test: FC<TestProps> = ({ href, image, title }) => {
+const FeatureItem: FC<FeatureItemProps> = ({ href, image, title }) => {
   return (
     <Link
       href={href}

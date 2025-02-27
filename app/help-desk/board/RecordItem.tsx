@@ -49,7 +49,7 @@ export const RecordItem: FC<RecordItemProps> = ({ record }) => {
     return ticketSchema.attributes.category.options.find(
       (option) => option.value === record.category
     )?.color;
-  }, [ticketSchema.attributes.category.options, record.category]);
+  }, [record.category]);
 
   const color = useMemo(() => {
     if (!bgColor) {
