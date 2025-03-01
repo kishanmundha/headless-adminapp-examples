@@ -10,7 +10,7 @@ import { App } from '@headless-adminapp/fluent/App';
 import { useSystemColorScheme } from '@headless-adminapp/app/hooks/useSystemColorScheme';
 import { clientExperienceStore } from '@/app/service-booking/config/client/experienceStore';
 import { clientSchemaStore } from '@/app/service-booking/config/client/schemaStore';
-import { appStore } from '@/app/service-booking/config/client/appStore';
+import { appExperience } from '@/app/service-booking/config/client/app';
 import { PropsWithChildren } from 'react';
 
 import { registerIconSet } from '@headless-adminapp/icons/register';
@@ -42,16 +42,16 @@ export default function AppLayout({ children }: Readonly<PropsWithChildren>) {
       metadataProps={{
         experienceStore: clientExperienceStore,
         schemaStore: clientSchemaStore,
-        appStore: appStore,
+        appExperience,
       }}
       authProps={{
         sessionResolver,
         onUnauthenticated: () => {
-          router.replace('/')
-        }
+          router.replace('/');
+        },
       }}
     >
-      <App appId="default">{children}</App>
+      <App>{children}</App>
     </LayoutProvider>
   );
 }

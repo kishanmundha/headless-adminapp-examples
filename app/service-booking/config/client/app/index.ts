@@ -2,7 +2,7 @@ import { AppExperience } from '@headless-adminapp/core/experience/app';
 import { navPageGroupAreas } from './navigations';
 import { commands } from '../commands';
 
-export const defaultApp: AppExperience = {
+export const appExperience: AppExperience = {
   id: 'default',
   logo: {},
   title: 'Service Booking',

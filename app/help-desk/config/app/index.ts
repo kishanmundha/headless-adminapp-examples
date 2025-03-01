@@ -8,7 +8,7 @@ const SettingsIcon = bundleLazyIcon('Settings24Regular', 'Settings24Filled');
 const AlertIcon = bundleLazyIcon('Alert24Regular', 'Alert24Filled');
 const SearchIcon = bundleLazyIcon('Search24Regular', 'Search24Filled');
 
-export const defaultApp: AppExperience = {
+export const appExperience: AppExperience = {
   id: 'default',
   logo: {
     image: 'https://cdn-icons-png.flaticon.com/512/5537/5537993.png',
