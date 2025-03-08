@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Badge,
   Body1,
   Button,
   Caption1,
@@ -8,7 +9,6 @@ import {
   MenuList,
   MenuPopover,
   MenuTrigger,
-  Tag,
   tokens,
   Tooltip,
 } from '@fluentui/react-components';
@@ -96,12 +96,18 @@ export const RecordItem: FC<RecordItemProps> = ({ record }) => {
         </MenuPopover>
       </Menu>
       <div style={{ display: 'flex', gap: tokens.spacingHorizontalS }}>
-        <Tag size="extra-small" style={{ color, backgroundColor: bgColor }}>
+        <Badge
+          style={{
+            color,
+            backgroundColor: bgColor,
+            fontWeight: tokens.fontWeightRegular,
+          }}
+        >
           {getAttributeFormattedValue(
             ticketSchema.attributes.category,
             record.category
           )}
-        </Tag>
+        </Badge>
       </div>
       <div
         style={{
