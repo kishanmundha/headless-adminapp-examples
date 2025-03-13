@@ -15,6 +15,7 @@ const nextConfig = {
         '@fluentui/react-components',
         '@fluentui/react-datepicker-compat',
         '@fluentui/react-timepicker-compat',
+        '@fluentui/react-nav-preview',
         ...config.externals,
       ];
     }
@@ -29,6 +30,9 @@ const nextConfig = {
     );
     config.resolve.alias['@fluentui/react-timepicker-compat'] = path.resolve(
       './node_modules/@fluentui/react-timepicker-compat'
+    );
+    config.resolve.alias['@fluentui/react-nav-preview'] = path.resolve(
+      './node_modules/@fluentui/react-nav-preview'
     );
 
     return config;

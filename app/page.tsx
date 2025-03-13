@@ -109,7 +109,7 @@ export default function Home() {
               title="Board"
             />
             <FeatureItem
-              href="/help-desk/data/ticets"
+              href="/help-desk/data/tickets"
               image="/screenshots/datagrid.png"
               title="Data Listing"
             />
