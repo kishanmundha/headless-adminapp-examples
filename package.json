@@ -10,6 +10,11 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.3.0",
+    "@fluentui/react-calendar-compat": "^0.2.1",
+    "@fluentui/react-components": "^9.60.1",
+    "@fluentui/react-datepicker-compat": "^0.5.1",
+    "@fluentui/react-nav-preview": "^0.13.0",
+    "@fluentui/react-timepicker-compat": "^0.3.1",
     "@fullcalendar/core": "^6.1.15",
     "@fullcalendar/daygrid": "^6.1.15",
     "@fullcalendar/interaction": "^6.1.15",
@@ -37,6 +42,7 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "recharts": "^2.13.3",
+    "sequelize": "^6.37.6",
     "uuid": "^11.0.4",
     "wcag-contrast": "^3.0.0",
     "zustand": "^5.0.1"
