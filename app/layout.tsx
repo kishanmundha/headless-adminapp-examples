@@ -1,7 +1,16 @@
 import Script from 'next/script';
 import './styles.css';
+import ThemeLayout from './ThemeLayout';
+import { Viewport } from 'next';
 
 const isDev = process.env.NODE_ENV === 'development';
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  minimumScale: 1,
+};
 
 export const metadata = {
   title: 'Headless AdminApp',
@@ -16,7 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>{!isDev && <Script src="/clarity.js" />}</head>
-      <body>{children}</body>
+      <body>
+        <ThemeLayout>{children}</ThemeLayout>
+      </body>
     </html>
   );
 }

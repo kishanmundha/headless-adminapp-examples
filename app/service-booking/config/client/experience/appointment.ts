@@ -11,7 +11,7 @@ const defaultViewExperience = builder.defineViewExperience({
 });
 
 export const appointmentSchemaExperience = builder.defineExperience({
-  icon: AppointmentIcon,
+  Icon: AppointmentIcon,
   views: [
     {
       id: 'default',

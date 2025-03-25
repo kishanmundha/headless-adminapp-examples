@@ -1,5 +1,5 @@
 import { AppExperience } from '@headless-adminapp/core/experience/app';
-import { navPageGroupAreas } from './navigations';
+import { navPageSections } from './navigations';
 import { commands } from '../commands';
 import { bundleLazyIcon } from '@headless-adminapp/icons-fluent/lazyIcon';
 import { GithubIcon } from '@/app/icons/Github';
@@ -14,22 +14,26 @@ export const appExperience: AppExperience = {
     image: 'https://cdn-icons-png.flaticon.com/512/5537/5537993.png',
   },
   title: 'Help Desk',
-  navItems: navPageGroupAreas,
+  navItems: navPageSections,
   accountMenuItems: [],
   quickActionItems: [
     {
+      type: 'icon',
       label: 'Search',
       icon: SearchIcon,
     },
     {
+      type: 'icon',
       label: 'Notification',
       icon: AlertIcon,
     },
     {
+      type: 'icon',
       label: 'Settings',
       icon: SettingsIcon,
     },
     {
+      type: 'icon',
       label: 'Github',
       icon: GithubIcon,
       link: 'https://github.com/kishanmundha/headless-adminapp-examples',

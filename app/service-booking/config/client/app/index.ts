@@ -1,12 +1,12 @@
 import { AppExperience } from '@headless-adminapp/core/experience/app';
-import { navPageGroupAreas } from './navigations';
+import { navPageSections } from './navigations';
 import { commands } from '../commands';
 
 export const appExperience: AppExperience = {
   id: 'default',
   logo: {},
   title: 'Service Booking',
-  navItems: navPageGroupAreas,
+  navItems: navPageSections,
   accountMenuItems: [],
   quickActionItems: [],
   viewCommands: commands.view,

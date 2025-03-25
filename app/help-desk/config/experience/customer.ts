@@ -7,7 +7,7 @@ const UserIcon = bundleLazyIcon('Person24Regular', 'Person24Filled');
 const builder = new SchemaExperienceBuilder(customerSchema);
 
 export const customerSchemaExperience = builder.defineExperience({
-  icon: UserIcon,
+  Icon: UserIcon,
   views: [
     {
       id: 'default',

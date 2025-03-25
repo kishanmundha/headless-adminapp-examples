@@ -50,7 +50,7 @@ const viewExperience = builder.defineViewExperience({
 });
 
 export const ticketSchemaExperience = builder.defineExperience({
-  icon: TicketIcon,
+  Icon: TicketIcon,
   defaultViewId: 'default',
   views: [
     {
