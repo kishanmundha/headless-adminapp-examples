@@ -8,7 +8,6 @@ import { WidgetWeeklyApplications } from './widgets/WidgetWeeklyApplications';
 import { WidgetApplicationPipeline } from './widgets/WidgetApplicationPipeline';
 import { WidgetApplicationByExperience } from './widgets/WidgetApplicationByExperience';
 import { WidgetApplicationsByWeekday } from './widgets/WidgetApplicationsByWeekday';
-import { WidgetApplicationHours } from './widgets/WidgetApplicationHours';
 
 export const config = defineInsightConfig<FilterAttributes>({
   title: 'Dashboard',
@@ -116,12 +115,6 @@ export const config = defineInsightConfig<FilterAttributes>({
           Component: RecentApplications,
         },
       ],
-    },
-    {
-      type: 'component',
-      rows: 6,
-      columns: 6,
-      Component: WidgetApplicationHours,
     },
   ],
 });
