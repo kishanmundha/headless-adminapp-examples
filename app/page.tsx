@@ -1,8 +1,9 @@
 'use client';
 
 import {
-  Body1,
   Link,
+  makeStyles,
+  Subtitle1,
   Subtitle2,
   Title1,
   tokens,
@@ -10,39 +11,44 @@ import {
 import Image from 'next/image';
 import { FC } from 'react';
 
+const useHomeStyles = makeStyles({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: tokens.spacingVerticalXL,
+    padding: tokens.spacingVerticalXXXL,
+    boxSizing: 'border-box',
+    background: tokens.colorNeutralBackground1,
+    height: '100vh',
+  },
+});
+
 export default function Home() {
+  const styles = useHomeStyles();
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: tokens.spacingVerticalM,
-        padding: tokens.spacingVerticalM,
-        width: '100vw',
-        height: '100vh',
-      }}
-    >
+    <div className={styles.root}>
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
           gap: tokens.spacingVerticalS,
           marginBottom: tokens.spacingVerticalM,
+          textAlign: 'center',
         }}
       >
         <Title1>Headless AdminApp</Title1>
-        <Body1>
+        <Subtitle2 style={{ fontWeight: tokens.fontWeightRegular }}>
           Welcome to the Headless AdminApp demo. This project showcases a set of
           components and design patterns for creating admin applications
           efficiently.
-        </Body1>
-        <Body1>
+        </Subtitle2>
+        <Subtitle2 style={{ fontWeight: tokens.fontWeightRegular }}>
           <Link href="https://headless-adminapp.github.io/">Documentation</Link>{' '}
           |{' '}
           <Link href="https://github.com/headless-adminapp/adminapp">
             GitHub
           </Link>
-        </Body1>
+        </Subtitle2>
       </div>
       <div
         style={{
@@ -51,15 +57,20 @@ export default function Home() {
           gap: tokens.spacingVerticalS,
         }}
       >
-        <Subtitle2>Apps</Subtitle2>
+        <Subtitle1>Apps</Subtitle1>
         <div
           style={{
             display: 'flex',
             flexDirection: 'row',
-            gap: tokens.spacingVerticalM,
+            gap: tokens.spacingVerticalXL,
             flexWrap: 'wrap',
           }}
         >
+          <FeatureItem
+            href="/talent-desk"
+            image="/screenshots/dashboard.png"
+            title="Talent Desk"
+          />
           <FeatureItem
             href="/help-desk"
             image="/screenshots/board.png"
@@ -79,15 +90,20 @@ export default function Home() {
           gap: tokens.spacingVerticalS,
         }}
       >
-        <Subtitle2>Pages</Subtitle2>
+        <Subtitle1>Pages</Subtitle1>
         <div
           style={{
             display: 'flex',
             flexDirection: 'row',
-            gap: tokens.spacingVerticalM,
+            gap: tokens.spacingVerticalXL,
             flexWrap: 'wrap',
           }}
         >
+          <FeatureItem
+            href="/talent-desk/dashboard"
+            image="/screenshots/dashboard.png"
+            title="Dashboard"
+          />
           <FeatureItem
             href="/help-desk/board"
             image="/screenshots/board.png"
@@ -114,6 +130,26 @@ export default function Home() {
   );
 }
 
+const useFeatureItemStyles = makeStyles({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    border: `1px solid ${tokens.colorNeutralStroke1}`,
+    borderRadius: tokens.borderRadiusMedium,
+    padding: tokens.spacingVerticalM,
+    gap: tokens.spacingVerticalM,
+    transition: 'transform 0.2s, box-shadow 0.2s',
+    background: tokens.colorNeutralBackground1,
+
+    '&:hover': {
+      transform: 'scale(1.2)',
+      boxShadow: tokens.shadow16,
+      border: `1px solid transparent`,
+    },
+  },
+});
+
 interface FeatureItemProps {
   href: string;
   title: string;
@@ -121,21 +157,18 @@ interface FeatureItemProps {
 }
 
 const FeatureItem: FC<FeatureItemProps> = ({ href, image, title }) => {
+  const styles = useFeatureItemStyles();
   return (
-    <Link
-      href={href}
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        border: `1px solid ${tokens.colorNeutralStroke1}`,
-        borderRadius: tokens.borderRadiusMedium,
-        padding: tokens.spacingVerticalM,
-        gap: tokens.spacingVerticalM,
-      }}
-    >
+    <Link href={href} className={styles.root}>
       <Image src={image} alt={title} width={287} height={139} />
-      <div>{title}</div>
+      <div
+        style={{
+          fontSize: tokens.fontSizeBase500,
+          fontWeight: tokens.fontWeightMedium,
+        }}
+      >
+        {title}
+      </div>
     </Link>
   );
 };
