@@ -4,6 +4,7 @@ import ThemeLayout from './ThemeLayout';
 import { Viewport } from 'next';
 
 const isDev = process.env.NODE_ENV === 'development';
+const clarityDisabled = process.env.CLARITY_DISABLED === 'true';
 
 export const viewport: Viewport = {
   initialScale: 1,
@@ -24,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>{!isDev && <Script src="/clarity.js" />}</head>
+      <head>{!isDev && !clarityDisabled && <Script src="/clarity.js" />}</head>
       <body>
         <ThemeLayout>{children}</ThemeLayout>
       </body>
