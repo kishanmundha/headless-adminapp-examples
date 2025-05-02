@@ -7,7 +7,7 @@ import {
   CalendarEventSaveFn,
   CalendarEventsResolverFn,
 } from '@headless-adminapp/app/calendar/types';
-import { Condition } from '@headless-adminapp/core/transport';
+import { Filter } from '@headless-adminapp/core/transport';
 import { InferredSchemaType } from '@headless-adminapp/core/schema';
 import { EntityName } from '../../config/enums';
 
@@ -62,7 +62,7 @@ export type FilterAttributes = typeof filterAttributes;
 export const calendarEventsResolver: CalendarEventsResolverFn<
   FilterAttributes
 > = async (options) => {
-  const conditions: Condition<string>[] = [
+  const conditions: Filter['conditions'] = [
     {
       field: 'end',
       operator: 'gte',

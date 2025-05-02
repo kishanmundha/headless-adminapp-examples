@@ -1,9 +1,9 @@
 import { RecordItem } from './RecordItem';
 import { defineBoardConfig } from '@headless-adminapp/app/board/utils';
 import { dealSchema } from '@/app/sales-hub/config/schema/deal';
-import { ItemUpdateContext } from '@/packages/app/board/types';
-import { defineQuickFilter } from '@/packages/core/experience/view/QuickFilter';
-import { Condition, Filter } from '@/packages/core/transport';
+import { ItemUpdateContext } from '@headless-adminapp/app/board/types';
+import { defineQuickFilter } from '@headless-adminapp/core/experience/view/QuickFilter';
+import { Condition, Filter } from '@headless-adminapp/core/transport';
 
 const statusTransitions: Record<string, string[]> = {
   ['opportunity']: ['proposal', 'negotiation'],

@@ -1,8 +1,8 @@
 import { SchemaExperienceBuilder } from '@headless-adminapp/app/builders';
 import { activitySchema } from '../../schema/activity';
 import dayjs from 'dayjs';
-import { defineQuickFilter } from '@/packages/core/experience/view/QuickFilter';
-import { Condition, Filter } from '@/packages/core/transport';
+import { defineQuickFilter } from '@headless-adminapp/core/experience/view/QuickFilter';
+import { Condition, Filter } from '@headless-adminapp/core/transport';
 
 const builder = new SchemaExperienceBuilder(activitySchema);
 

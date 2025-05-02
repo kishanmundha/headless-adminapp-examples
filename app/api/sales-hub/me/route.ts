@@ -55,7 +55,7 @@ export interface AuthTokenInfo {
   timezone?: string;
 }
 
-export function getAuthTokenInfo(
+function getAuthTokenInfo(
   token: string | undefined | null
 ): AuthTokenInfo | null {
   if (!JWT_SECRET) {
@@ -80,7 +80,7 @@ export function getAuthTokenInfo(
   return decoded as AuthTokenInfo;
 }
 
-export function getTokenFromRequest(req: NextRequest): string | null {
+function getTokenFromRequest(req: NextRequest): string | null {
   if (req.headers.get('authorization')) {
     const authorization = req.headers.get('authorization');
 

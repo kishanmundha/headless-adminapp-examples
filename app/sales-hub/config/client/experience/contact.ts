@@ -1,6 +1,6 @@
 import { SchemaExperienceBuilder } from '@headless-adminapp/app/builders';
 import { contactSchema } from '../../schema/contact';
-import { bundleLazyIcon } from '@/packages/icons-fluent/lazyIcon';
+import { bundleLazyIcon } from '@headless-adminapp/icons-fluent/lazyIcon';
 
 const builder = new SchemaExperienceBuilder(contactSchema);
 

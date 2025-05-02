@@ -1,7 +1,7 @@
 import { SchemaExperienceBuilder } from '@headless-adminapp/app/builders';
 import { dealSchema } from '../../schema/deal';
 import { TimelineControl } from '../components/TimelineControl';
-import { bundleLazyIcon } from '@/packages/icons-fluent/lazyIcon';
+import { bundleLazyIcon } from '@headless-adminapp/icons-fluent/lazyIcon';
 
 const builder = new SchemaExperienceBuilder(dealSchema);
 

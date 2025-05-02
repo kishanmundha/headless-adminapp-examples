@@ -8,7 +8,6 @@ import {
   MenuList,
   MenuPopover,
   MenuTrigger,
-  Tag,
   tokens,
   Tooltip,
 } from '@fluentui/react-components';
@@ -19,13 +18,11 @@ import dayjs from 'dayjs';
 import { useOpenForm } from '@headless-adminapp/app/navigation/hooks';
 
 import { getAttributeFormattedValue } from '@headless-adminapp/app/utils';
-import { isColorDark } from '@headless-adminapp/app/utils/color';
 import { Deal, dealSchema } from '@/app/sales-hub/config/schema/deal';
-import { ChoiceBadge } from '@/packages/fluent/components/ChoiceBadge';
-import { useLocale } from '@/packages/app/locale';
+import { ChoiceBadge } from '@headless-adminapp/fluent/components/ChoiceBadge';
+import { useLocale } from '@headless-adminapp/app/locale';
 
 const CalenderIcon = bundleLazyIcon('Calendar24Regular', 'Calendar24Filled');
-const ChatIcon = bundleLazyIcon('Chat24Regular', 'Chat24Filled');
 
 const MoreMenuIcon = bundleLazyIcon(
   'MoreVertical24Regular',

@@ -1390,10 +1390,10 @@
   dependencies:
     csstype "^3.1.3"
 
-"@headless-adminapp/app@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/app/-/app-1.1.0.tgz#970ad4be2bb5c612b44c33be2b56c241301adc9e"
-  integrity sha512-GKF9qDjXHIGw9re9b6rAKeOP1E3XZRtLz0dASxJtN5xbyQ8cm5Ih2X8io0LFP7rTSyUqMlI7h8O32cJU4Re1Yg==
+"@headless-adminapp/app@~1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/app/-/app-1.2.0.tgz#a3463b99048fc317c6a91e1e605b69a5803a05a8"
+  integrity sha512-1fI9pVEKMQY4IoO6ojQQ2JbZJs3l+aHUkMOSSBzJf67osIJezAnFwuxnn0vgPZ9F6jByGG56hwIKjwP2Qp1msg==
   dependencies:
     "@hookform/resolvers" "^3.9.0"
     clsx "2.1.1"
@@ -1407,17 +1407,17 @@
     uuid "11.0.3"
     yup "^1.4.0"
 
-"@headless-adminapp/core@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/core/-/core-1.1.0.tgz#f418b25a258347b58b87d689823224811c1c85d8"
-  integrity sha512-apGTTOsoELSIWpzr+g658LOQoTDQPOCQOR8LJh4Szg6ezygWmCI5zAdZb4ABvwMO00pWhZCZNZUuc+zGZh5NSw==
+"@headless-adminapp/core@~1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/core/-/core-1.2.0.tgz#f17efbf743eb3e4040cf593e617c8686e6ffe3b3"
+  integrity sha512-1/3U2pHOE9/5noPky+l4JO9Y5Y1bTZTlbbmly8JFcD2yoO76iZbW+uyi7EK5nqohg+w4+jtkiI73LyTFzoR70A==
   dependencies:
     uuid "11.0.3"
 
-"@headless-adminapp/fluent@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/fluent/-/fluent-1.1.1.tgz#738feba4c5254304a2f1aeb0d96233ef39c2c917"
-  integrity sha512-pPQWb8nUP4IbOG1z8fdRwqcQHxNRFxVrQYhwaump9AiXecXfsEYoeuxyY3s6EUrW1+GAMo2KFIzzZ7NM8sbWQg==
+"@headless-adminapp/fluent@~1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/fluent/-/fluent-1.2.0.tgz#3001ad562dbf580431b9596d82ce7649dcf6c920"
+  integrity sha512-s9RYxTtTXWxzzIlnvdda5XphkJl4Z4D2001/m6InUe/2qmAuFtUzwhiWYwKaTM4UGEhk/r/ejl6x7rXCm/GO8Q==
   dependencies:
     "@fullcalendar/core" "6.1.15"
     "@fullcalendar/daygrid" "6.1.15"
@@ -1440,32 +1440,32 @@
     uuid "11.0.3"
     yup "^1.4.0"
 
-"@headless-adminapp/icons-fluent@^1.0.0":
+"@headless-adminapp/icons-fluent@~1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@headless-adminapp/icons-fluent/-/icons-fluent-1.0.0.tgz#e9561af85d6811c4acfe6e04729a03bad851953a"
   integrity sha512-dvY130MJIYj9zc1joLGAP8svnO/Ffg05QbqzBfondy9Eb0CMjb0txrY30t3LDRqOml+OApAfiWhup7updA/FcA==
   dependencies:
     "@fluentui/react-icons" "^2.0.274"
 
-"@headless-adminapp/icons@^1.0.0":
+"@headless-adminapp/icons@~1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@headless-adminapp/icons/-/icons-1.0.0.tgz#2f553b8ae05ff5834ced9fd8a77a6bcfb3d2316a"
   integrity sha512-mCS/ingmsa2dVH2Ym8KGTT+K9+ioBWbawUDq77D3RolxA1lj/+Ar1fmReVhjj6qTAeK40Cs108nY8cBWJIlqJw==
   dependencies:
     clsx "2.1.1"
 
-"@headless-adminapp/server-sdk-sequelize@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/server-sdk-sequelize/-/server-sdk-sequelize-1.1.0.tgz#1bd6d0390b56f977ba55d55575ab22684fd77442"
-  integrity sha512-xBHviBfpRb1JOMyGPYyfJa4TCV8nJTBsuFeKcRkuu9Us3emtgwpRJoE46HD6suVsYtcWQ2E3+su2Ek3qD6nWvA==
+"@headless-adminapp/server-sdk-sequelize@~1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/server-sdk-sequelize/-/server-sdk-sequelize-1.2.0.tgz#9051708310a8141eff479ecf3346c971b6ba486a"
+  integrity sha512-jpUmYWAoxGuxFL9Ncbf9XoJSUhUAbUHb+tbw53pmmtIS+A1Ejih/kqCq7xOTX7Cj3XsURO++sP8nBO345WNA9Q==
   dependencies:
     dayjs "^1.11.13"
     uuid "11.0.3"
 
-"@headless-adminapp/server-sdk@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/server-sdk/-/server-sdk-1.1.0.tgz#8f12c61b447126571f9253f12212c1b54aa7e9be"
-  integrity sha512-J2OteoYIeebsk6Kl0so5A/3KYsO0UfhYNUOejPlI7Rh7M47lhpFaCxmMbWdBP5Gy/9HztoSGxVyNmM+Q/7/r2A==
+"@headless-adminapp/server-sdk@~1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/server-sdk/-/server-sdk-1.2.0.tgz#fba6a4ac8d78685efb0be298b10e600a2fa6f9cc"
+  integrity sha512-wBqVa7fQtp36H/VUbIdfPEto86WA7ZdbsL/lW68UeESJ/n+KrZHUh/LNWHTdD7sOS6X2odxs2LvCZq8fgLLn8w==
 
 "@hookform/resolvers@^3.9.0":
   version "3.10.0"

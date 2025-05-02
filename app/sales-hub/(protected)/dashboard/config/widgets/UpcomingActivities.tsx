@@ -6,7 +6,6 @@ import { WidgetTitleBar } from '@headless-adminapp/fluent/Insights/WidgetTitleBa
 import { bundleLazyIcon } from '@headless-adminapp/icons-fluent/lazyIcon';
 import { FC, Fragment } from 'react';
 import {
-  Avatar,
   Body1,
   Caption1,
   Divider,
@@ -22,8 +21,8 @@ import {
   ActivityAttributes,
   activitySchema,
 } from '@/app/sales-hub/config/schema/activity';
-import { ChoiceBadge } from '@/packages/fluent/components/ChoiceBadge';
-import { useOpenForm } from '@/packages/app/navigation';
+import { ChoiceBadge } from '@headless-adminapp/fluent/components/ChoiceBadge';
+import { useOpenForm } from '@headless-adminapp/app/navigation';
 
 dayjs.extend(relativeTime);
 

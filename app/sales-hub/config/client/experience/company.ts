@@ -2,7 +2,7 @@ import { SchemaExperienceBuilder } from '@headless-adminapp/app/builders';
 import { companySchema } from '../../schema/company';
 import { defineSectionEditableGridControl } from '@headless-adminapp/core/experience/form/utils';
 import { ContactAttributes } from '../../schema/contact';
-import { bundleLazyIcon } from '@/packages/icons-fluent/lazyIcon';
+import { bundleLazyIcon } from '@headless-adminapp/icons-fluent/lazyIcon';
 
 const builder = new SchemaExperienceBuilder(companySchema);
 

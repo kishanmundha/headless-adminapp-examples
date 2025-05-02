@@ -24,7 +24,7 @@ import {
   useRefreshEventListener,
 } from '@headless-adminapp/app/insights';
 import { FilterAttributes } from '../filterAttributes';
-import { Condition } from '@headless-adminapp/core/transport';
+import { Condition, Filter } from '@headless-adminapp/core/transport';
 
 dayjs.extend(relativeTime);
 
@@ -56,10 +56,12 @@ export const RecentApplications: FC = () => {
   const { data, refetch } = useRetriveRecords({
     columns,
     expand: undefined,
-    filter: {
-      type: 'and',
-      conditions: [...filterConditions],
-    },
+    filter: !filterConditions.length
+      ? undefined
+      : ({
+          type: 'and',
+          conditions: [...filterConditions],
+        } as Filter),
     maxRecords: 10,
     schema: applicationSchema,
     search: '',

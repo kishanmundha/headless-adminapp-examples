@@ -28,10 +28,10 @@ import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
 import { BodyLoading } from '@headless-adminapp/fluent/components/BodyLoading';
 import { useOpenForm } from '@headless-adminapp/app/navigation';
-import { useLocale } from '@/packages/app/locale';
-import { useOpenPromptDialog } from '@/packages/app/dialog';
+import { useLocale } from '@headless-adminapp/app/locale';
+import { useOpenPromptDialog } from '@headless-adminapp/app/dialog';
 import { noteSchema } from '../../schema/note';
-import { useDataService } from '@/packages/app/transport';
+import { useDataService } from '@headless-adminapp/app/transport';
 import { appointmentSchema } from '../../schema/appointment';
 
 dayjs.extend(utc);

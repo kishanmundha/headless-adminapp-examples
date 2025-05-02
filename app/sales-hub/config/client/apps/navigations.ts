@@ -1,4 +1,4 @@
-import { bundleLazyIcon } from '@/packages/icons-fluent/lazyIcon';
+import { bundleLazyIcon } from '@headless-adminapp/icons-fluent/lazyIcon';
 import {
   NavPageSection,
   PageType,
