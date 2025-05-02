@@ -7,8 +7,6 @@ import { Product } from '@/app/help-desk/config/schema/product';
 import { Agent } from '@/app/help-desk/config/schema/agent';
 import { EntityName } from '@/app/help-desk/config/enums';
 
-faker.seed(1);
-
 type DbTicket = Omit<Ticket, 'customer_id' | 'product_id' | 'agent_id'> & {
   customer_id: string;
   product_id: string;

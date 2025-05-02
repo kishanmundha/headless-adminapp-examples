@@ -47,7 +47,7 @@ let generated = false;
 let generatingPromise: Promise<void> | null = null;
 
 async function prepareMockDataInternal(currentUser: CurrentUser) {
-  const users: DbUser[] = new Array(2).fill(null).map((index) => {
+  const users: DbUser[] = new Array(2).fill(null).map((_, index) => {
     if (index === 0) {
       return {
         ...currentUser,

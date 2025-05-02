@@ -26,6 +26,12 @@ const config = defineCalendarConfig({
   title: 'Appointments',
   description: 'Manage your appointments',
   eventLabel: 'Appointment',
+  createOptions: {
+    mode: 'dialog',
+  },
+  editOptions: {
+    mode: 'dialog',
+  },
 });
 
 export default function Page() {

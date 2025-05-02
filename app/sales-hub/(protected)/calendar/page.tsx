@@ -17,15 +17,33 @@ const config = defineCalendarConfig({
   beforeDescriptionAttributes: beforeDescriptionAttributes,
   filterAttributes: filterAttributes,
   defaultFilter: {},
-  title: 'Interviews',
-  description: 'Interview schedule',
-  eventLabel: 'Interview',
+  title: 'Appointments',
+  description: 'Appointment schedule',
+  eventLabel: 'Appointment',
   disableAllDay: true,
-  createOptions: {
-    mode: 'dialog',
-  },
   editOptions: {
-    mode: 'dialog',
+    mode: 'custom',
+    onClick: (event, options) => {
+      options.openForm({
+        logicalName: 'appointments',
+        id: event.id,
+      });
+    },
+  },
+  createOptions: {
+    mode: 'custom',
+    allowQuickCreate: true,
+    onClick: (defaultValues, options) => {
+      options.openForm({
+        logicalName: 'appointments',
+        parameters: {
+          title: defaultValues.title,
+          start: defaultValues.start,
+          end: defaultValues.end,
+          description: defaultValues.description,
+        },
+      });
+    },
   },
 });
 
