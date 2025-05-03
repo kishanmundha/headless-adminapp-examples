@@ -72,6 +72,11 @@ export default function Home() {
             title="Talent Desk"
           />
           <FeatureItem
+            href="/sales-hub"
+            image="/screenshots/crm.png"
+            title="CRM"
+          />
+          <FeatureItem
             href="/help-desk"
             image="/screenshots/board.png"
             title="Help Desk"
