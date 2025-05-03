@@ -10,13 +10,13 @@ export default function Page() {
   const searchParams = useSearchParams();
   const next = useMemo(() => {
     if (typeof window === 'undefined') {
-      return '/sales-hub/welcome';
+      return '/sales-hub/dashboard';
     }
 
     const next = searchParams.get('next');
 
     if (!next) {
-      return '/sales-hub/welcome';
+      return '/sales-hub/dashboard';
     }
 
     return next;

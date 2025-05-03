@@ -3,6 +3,8 @@ import {
   NavPageSection,
   PageType,
 } from '@headless-adminapp/core/experience/app';
+import { NavMessageCountBadge } from '@/app/sales-hub/components/NavMessageBadge';
+import { iconSet } from '@headless-adminapp/icons-fluent';
 
 const DashboardIcon = bundleLazyIcon(
   'DataTrending24Regular',
@@ -23,6 +25,8 @@ const ActivityIcon = bundleLazyIcon(
   'DocumentCheckmark24Regular',
   'DocumentCheckmark24Filled'
 );
+const MessageIcon = bundleLazyIcon('Chat24Regular', 'Chat24Filled');
+const HelpIcon = bundleLazyIcon('ChatHelp24Regular', 'ChatHelp24Filled');
 
 export const navPageGroupAreas: NavPageSection[] = [
   {
@@ -67,6 +71,30 @@ export const navPageGroupAreas: NavPageSection[] = [
       {
         type: PageType.EntityView,
         logicalName: 'contacts',
+      },
+      {
+        type: PageType.Custom,
+        label: 'Messages',
+        link: '/messages',
+        Icon: MessageIcon,
+        RightComponent: NavMessageCountBadge,
+      },
+    ],
+  },
+  {
+    label: 'Configuration',
+    items: [
+      {
+        type: PageType.Custom,
+        label: 'Settings',
+        link: '/settings',
+        Icon: iconSet.Settings,
+      },
+      {
+        type: PageType.Custom,
+        label: 'Support',
+        link: '/support',
+        Icon: HelpIcon,
       },
     ],
   },
