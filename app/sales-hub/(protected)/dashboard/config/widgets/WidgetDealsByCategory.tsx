@@ -30,8 +30,6 @@ export const WidgetDealsByCategory: FC = () => {
 
   useRefreshEventListener(refetch);
 
-  console.log('data', data);
-
   return (
     <WidgetChart
       dataset={[data]}

@@ -9,7 +9,8 @@ import {
   tokens,
 } from '@fluentui/react-components';
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 const useHomeStyles = makeStyles({
   root: {
@@ -43,9 +44,14 @@ export default function Home() {
           efficiently.
         </Subtitle2>
         <Subtitle2 style={{ fontWeight: tokens.fontWeightRegular }}>
-          <Link href="https://headless-adminapp.github.io/">Documentation</Link>{' '}
+          <Link href="https://headless-adminapp.github.io/" target="_blank">
+            Documentation
+          </Link>{' '}
           |{' '}
-          <Link href="https://github.com/headless-adminapp/adminapp">
+          <Link
+            href="https://github.com/headless-adminapp/adminapp"
+            target="_blank"
+          >
             GitHub
           </Link>
         </Subtitle2>
@@ -163,6 +169,12 @@ interface FeatureItemProps {
 
 const FeatureItem: FC<FeatureItemProps> = ({ href, image, title }) => {
   const styles = useFeatureItemStyles();
+  const router = useRouter();
+
+  useEffect(() => {
+    router.prefetch(href);
+  }, [router, href]);
+
   return (
     <Link href={href} className={styles.root}>
       <Image src={image} alt={title} width={287} height={139} />
