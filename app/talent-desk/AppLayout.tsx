@@ -10,9 +10,10 @@ import {
   Theme,
 } from '@fluentui/react-components';
 import { LayoutProvider } from '@headless-adminapp/fluent/App/LayoutProvider';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { App } from '@headless-adminapp/fluent/App';
 import { useSystemColorScheme } from '@headless-adminapp/app/hooks/useSystemColorScheme';
+import { useNextRouter } from '@headless-adminapp/next-router';
 import { clientExperienceStore } from '@/app/talent-desk/config/client/experienceStore';
 import { clientSchemaStore } from '@/app/talent-desk/config/client/schemaStore';
 import { appExperience } from '@/app/talent-desk/config/client/app';
@@ -59,7 +60,7 @@ darkTheme.colorBrandForeground2 = myNewTheme[120];
 export const queryClient = new QueryClient();
 
 export default function AppLayout({ children }: Readonly<PropsWithChildren>) {
-  const router = useRouter();
+  const router = useNextRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
 

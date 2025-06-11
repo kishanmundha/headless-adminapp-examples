@@ -28,6 +28,9 @@ import { DateRangeAttribute } from '@headless-adminapp/core/attributes/DateRange
 import { MultiLookupAttribute } from '@headless-adminapp/core/attributes/LookupAttribute';
 import { MoneyAttribute } from '@headless-adminapp/core/attributes/MoneyAttribute';
 import { StandardControl } from '@headless-adminapp/fluent/PageEntityForm/StandardControl';
+import dayjs from 'dayjs';
+import { useMemo, useState } from 'react';
+import { Controller, useForm } from 'react-hook-form';
 
 const useStyles = makeStyles({
   table: {
@@ -130,14 +133,14 @@ const dateAttributes: Record<string, DateAttribute> = {
     format: 'date',
     label: 'Date',
     description: 'Date input',
-    default: new Date(),
+    default: dayjs().format('YYYY-MM-DD'),
   },
   dateTime: {
     type: 'date',
     format: 'datetime',
     label: 'DateTime',
     description: 'Date and time input',
-    default: new Date(),
+    default: dayjs().toISOString(),
   },
 };
 
@@ -146,7 +149,10 @@ const dateRangeAttributes: Record<string, DateRangeAttribute> = {
     type: 'daterange',
     label: 'Date Range',
     description: 'Date range input',
-    default: [new Date(), new Date()],
+    default: [
+      dayjs().format('YYYY-MM-DD'),
+      dayjs().add(7, 'day').format('YYYY-MM-DD'),
+    ],
   },
 };
 
@@ -403,6 +409,21 @@ const attributes: Record<string, Attribute> = {
 
 export default function Page() {
   const styles = useStyles();
+  const [skeleton] = useState(false);
+
+  const initialValues = useMemo(() => {
+    const values: Record<string, any> = {};
+    Object.entries(attributes).forEach(([key, attribute]) => {
+      values[key] = attribute.default;
+    });
+    return values;
+  }, []);
+
+  const form = useForm({
+    defaultValues: initialValues,
+    mode: 'onChange',
+  });
+
   return (
     <ScrollView>
       <div
@@ -455,14 +476,23 @@ export default function Page() {
                     )}
                   </div>
                 </TableCell>
-                <TableCell style={{ paddingBlock: tokens.spacingVerticalS }}>
-                  <StandardControl
-                    attribute={attribute}
-                    name={key}
-                    value={attribute.default}
-                    onChange={() => {}}
-                  />
-                </TableCell>
+                <Controller
+                  name={key}
+                  control={form.control}
+                  render={({ field }) => (
+                    <TableCell
+                      style={{ paddingBlock: tokens.spacingVerticalS }}
+                    >
+                      <StandardControl
+                        attribute={attribute}
+                        name={key}
+                        value={field.value}
+                        onChange={field.onChange}
+                        skeleton={skeleton}
+                      />
+                    </TableCell>
+                  )}
+                />
               </TableRow>
             ))}
           </TableBody>

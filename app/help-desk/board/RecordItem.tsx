@@ -23,6 +23,7 @@ import { useOpenForm } from '@headless-adminapp/app/navigation/hooks';
 import { getAttributeFormattedValue } from '@headless-adminapp/app/utils';
 import { isColorDark } from '@headless-adminapp/app/utils/color';
 import { EntityName } from '../config/enums';
+import { useLocale } from '@headless-adminapp/app/locale';
 
 const CalenderIcon = bundleLazyIcon('Calendar24Regular', 'Calendar24Filled');
 const ChatIcon = bundleLazyIcon('Chat24Regular', 'Chat24Filled');
@@ -40,6 +41,7 @@ interface RecordItemProps {
 export const RecordItem: FC<RecordItemProps> = ({ record }) => {
   const customer = record.$expand?.customer_id as Data<Customer>;
   const openForm = useOpenForm();
+  const locale = useLocale();
 
   const bgColor = useMemo(() => {
     if (!record.category || !ticketSchema.attributes.category.options) {
@@ -105,7 +107,8 @@ export const RecordItem: FC<RecordItemProps> = ({ record }) => {
         >
           {getAttributeFormattedValue(
             ticketSchema.attributes.category,
-            record.category
+            record.category,
+            locale
           )}
         </Badge>
       </div>

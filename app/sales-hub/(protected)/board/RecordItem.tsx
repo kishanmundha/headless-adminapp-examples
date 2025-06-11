@@ -36,7 +36,7 @@ interface RecordItemProps {
 
 export const RecordItem: FC<RecordItemProps> = ({ record }) => {
   const openForm = useOpenForm();
-  const { currency } = useLocale();
+  const locale = useLocale();
 
   return (
     <div
@@ -113,11 +113,7 @@ export const RecordItem: FC<RecordItemProps> = ({ record }) => {
             getAttributeFormattedValue(
               dealSchema.attributes.amount,
               record.amount,
-              {
-                currency: currency.currency,
-                currencyDisplay: currency.currencyDisplay,
-                currencySign: currency.currencySign,
-              }
+              locale
             )}
         </Body1>
         <Caption1

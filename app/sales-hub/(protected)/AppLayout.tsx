@@ -5,9 +5,10 @@ import '@headless-adminapp/fluent/styles.css';
 import 'react-quill/dist/quill.snow.css';
 import { webLightTheme, webDarkTheme } from '@fluentui/react-components';
 import { LayoutProvider } from '@headless-adminapp/fluent/App/LayoutProvider';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { App } from '@headless-adminapp/fluent/App';
 import { useSystemColorScheme } from '@headless-adminapp/app/hooks/useSystemColorScheme';
+import { useNextRouter } from '@headless-adminapp/next-router';
 import { clientExperienceStore } from '../config/client/experienceStore';
 import { clientSchemaStore } from '../config/client/schemaStore';
 import { PropsWithChildren } from 'react';
@@ -22,7 +23,7 @@ import { AuthProviderPlaceholder } from './AuthProviderPlaceholder';
 registerIconSet(iconSet);
 
 export default function AppLayout({ children }: Readonly<PropsWithChildren>) {
-  const router = useRouter();
+  const router = useNextRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
 

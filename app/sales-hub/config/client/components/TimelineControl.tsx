@@ -247,7 +247,8 @@ interface TimelineItemProps {
 function TimelineItem({ record, refetch }: TimelineItemProps) {
   const styles = useStyles();
   const openForm = useOpenForm();
-  const { timezone, dateFormats, timeFormats } = useLocale();
+  const locale = useLocale();
+  const { timezone, dateFormats, timeFormats } = locale;
 
   const openPromptDialog = useOpenPromptDialog();
   const dataService = useDataService();
@@ -306,7 +307,8 @@ function TimelineItem({ record, refetch }: TimelineItemProps) {
               value={record.status}
               formattedValue={getAttributeFormattedValue(
                 taskSchema.attributes.status,
-                record.status
+                record.status,
+                locale
               )}
               attribute={taskSchema.attributes.status}
               size="small"
@@ -425,7 +427,8 @@ function TimelineItem({ record, refetch }: TimelineItemProps) {
               value={record.status}
               formattedValue={getAttributeFormattedValue(
                 appointmentSchema.attributes.status,
-                record.status
+                record.status,
+                locale
               )}
               attribute={appointmentSchema.attributes.status}
               size="small"
