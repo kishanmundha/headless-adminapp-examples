@@ -2,6 +2,7 @@ import Script from 'next/script';
 import './styles.css';
 import ThemeLayout from './ThemeLayout';
 import { Viewport } from 'next';
+import { LIB_REF_HIDDEN } from './env';
 
 const isDev = process.env.NODE_ENV === 'development';
 const clarityDisabled = process.env.CLARITY_DISABLED === 'true';
@@ -14,8 +15,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata = {
-  title: 'Headless AdminApp',
-  description: 'Headless AdminApp',
+  title: LIB_REF_HIDDEN ? 'App' : 'Headless AdminApp',
+  description: LIB_REF_HIDDEN ? 'App' : 'Headless AdminApp',
 };
 
 export default function RootLayout({

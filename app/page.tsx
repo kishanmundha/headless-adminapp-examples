@@ -11,6 +11,7 @@ import {
 import Image from 'next/image';
 import { FC, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { LIB_REF_HIDDEN } from './env';
 
 const useHomeStyles = makeStyles({
   root: {
@@ -28,34 +29,36 @@ export default function Home() {
   const styles = useHomeStyles();
   return (
     <div className={styles.root}>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: tokens.spacingVerticalS,
-          marginBottom: tokens.spacingVerticalM,
-          textAlign: 'center',
-        }}
-      >
-        <Title1>Headless AdminApp</Title1>
-        <Subtitle2 style={{ fontWeight: tokens.fontWeightRegular }}>
-          Welcome to the Headless AdminApp demo. This project showcases a set of
-          components and design patterns for creating admin applications
-          efficiently.
-        </Subtitle2>
-        <Subtitle2 style={{ fontWeight: tokens.fontWeightRegular }}>
-          <Link href="https://headless-adminapp.github.io/" target="_blank">
-            Documentation
-          </Link>{' '}
-          |{' '}
-          <Link
-            href="https://github.com/headless-adminapp/adminapp"
-            target="_blank"
-          >
-            GitHub
-          </Link>
-        </Subtitle2>
-      </div>
+      {!LIB_REF_HIDDEN && (
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: tokens.spacingVerticalS,
+            marginBottom: tokens.spacingVerticalM,
+            textAlign: 'center',
+          }}
+        >
+          <Title1>Headless AdminApp</Title1>
+          <Subtitle2 style={{ fontWeight: tokens.fontWeightRegular }}>
+            Welcome to the Headless AdminApp demo. This project showcases a set
+            of components and design patterns for creating admin applications
+            efficiently.
+          </Subtitle2>
+          <Subtitle2 style={{ fontWeight: tokens.fontWeightRegular }}>
+            <Link href="https://headless-adminapp.github.io/" target="_blank">
+              Documentation
+            </Link>{' '}
+            |{' '}
+            <Link
+              href="https://github.com/headless-adminapp/adminapp"
+              target="_blank"
+            >
+              GitHub
+            </Link>
+          </Subtitle2>
+        </div>
+      )}
       <div
         style={{
           display: 'flex',
