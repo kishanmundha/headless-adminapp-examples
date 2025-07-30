@@ -1449,10 +1449,10 @@
   dependencies:
     csstype "^3.1.3"
 
-"@headless-adminapp/app@~1.4.10":
-  version "1.4.10"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/app/-/app-1.4.10.tgz#f1bb3d45c02435af43148524787699f6cd95655f"
-  integrity sha512-Qt6IFfYssP4EsdvVS3Se55EJUNPgEm3uecd4f9/5wzqz8QTu6eMSilbEZp8LHLuvYUVlzuVPPp7t9mlTY9gxLg==
+"@headless-adminapp/app@~1.4.11":
+  version "1.4.11"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/app/-/app-1.4.11.tgz#354b529b0a34a39c98626fcb5bed4761f6707346"
+  integrity sha512-w+TIxdQICe2YWdW4vSe+hzqDQ5/YSETdWPmsvmcW1MfGDb61cHMd7Ai65g7Z282bPCkWO/1F3K2uIt15rAqZlQ==
   dependencies:
     "@fullcalendar/core" "6.1.15"
     "@hookform/resolvers" "^3.9.0"
@@ -1475,10 +1475,10 @@
   dependencies:
     uuid "11.0.3"
 
-"@headless-adminapp/fluent@~1.4.10":
-  version "1.4.10"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/fluent/-/fluent-1.4.10.tgz#a9f915756993c3824af9f52a709505bd200afd99"
-  integrity sha512-qtEeYnqsY9AYbGNDN6G3mS5rE9eWRVs7FhpjqHiJEgNemE0gPxgFNyl7wdico7le19RRaq3I7zXLrE/wvp3Ssw==
+"@headless-adminapp/fluent@~1.4.11":
+  version "1.4.11"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/fluent/-/fluent-1.4.11.tgz#7a67a5f7e4bfa886390d1f99b342c60d1c331b5b"
+  integrity sha512-rvdl4hZxuXY7m245Y5ToOoAAkS/IM1klyFxKMyVdzSDB74Q+cIOUMr4iX5Zl/S2CkBUDk39ruXxPrumzUZeZ2g==
   dependencies:
     "@fullcalendar/core" "6.1.15"
     "@fullcalendar/daygrid" "6.1.15"
@@ -1517,10 +1517,10 @@
   dependencies:
     clsx "2.1.1"
 
-"@headless-adminapp/next-router@~1.4.10":
-  version "1.4.10"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/next-router/-/next-router-1.4.10.tgz#842f6b6d340e64036016c32d3bb98db487896a9d"
-  integrity sha512-SAhHfqIUG8Kk8yjNY5QIo8PUJhP7u5jbDkUEJnE3Fi6zrTc9bEjhPcNADi+yp1lzc7UOhKCnkYXX1fLg72Fa3Q==
+"@headless-adminapp/next-router@~1.4.11":
+  version "1.4.11"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/next-router/-/next-router-1.4.11.tgz#46fbbeaa4b00e5637fe4ee453e406918d0631a5a"
+  integrity sha512-052iHYFH9lDYiV7f8o6GxU8rST61pCG0W2eLrdRpF7GnXBK7S1Zh/XywfkHEZ3JYN1yO+PWc8k4y1Nxd3zHBoQ==
 
 "@headless-adminapp/server-sdk-sequelize@~1.4.8":
   version "1.4.8"
