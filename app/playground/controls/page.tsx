@@ -5,12 +5,19 @@ import {
   Body1,
   Caption1,
   makeStyles,
+  Menu,
+  MenuItemCheckbox,
+  MenuList,
+  MenuPopover,
+  MenuTrigger,
+  Subtitle2,
   Table,
   TableBody,
   TableCell,
   TableRow,
   tokens,
 } from '@fluentui/react-components';
+import { bundleLazyIcon } from '@headless-adminapp/icons-fluent/lazyIcon';
 import { ScrollView } from '@headless-adminapp/app/components/ScrollView';
 import { Attribute } from '@headless-adminapp/core';
 import {
@@ -28,9 +35,15 @@ import { DateRangeAttribute } from '@headless-adminapp/core/attributes/DateRange
 import { MultiLookupAttribute } from '@headless-adminapp/core/attributes/LookupAttribute';
 import { MoneyAttribute } from '@headless-adminapp/core/attributes/MoneyAttribute';
 import { StandardControl } from '@headless-adminapp/fluent/PageEntityForm/StandardControl';
+import {
+  Button,
+  extendedTokens,
+} from '@headless-adminapp/fluent/components/fluent';
 import dayjs from 'dayjs';
 import { useMemo, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
+
+const SettingIcon = bundleLazyIcon('Settings24Regular', 'Settings24Filled');
 
 const useStyles = makeStyles({
   table: {
@@ -409,7 +422,8 @@ const attributes: Record<string, Attribute> = {
 
 export default function Page() {
   const styles = useStyles();
-  const [skeleton] = useState(false);
+  const [skeleton, setSkeleton] = useState(false);
+  const [readOnly, setReadOnly] = useState(false);
 
   const initialValues = useMemo(() => {
     const values: Record<string, any> = {};
@@ -425,79 +439,147 @@ export default function Page() {
   });
 
   return (
-    <ScrollView>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        flex: 1,
+      }}
+    >
       <div
         style={{
           display: 'flex',
-          flexDirection: 'column',
-          padding: tokens.spacingHorizontalM,
+          background: tokens.colorNeutralBackground1,
+          borderRadius: extendedTokens.paperBorderRadius,
+          paddingBlock: tokens.spacingVerticalM,
+          paddingInline: tokens.spacingHorizontalM,
+          gap: tokens.spacingVerticalM,
+          boxShadow: tokens.shadow4,
+          margin: tokens.spacingVerticalM,
+          marginBottom: 0,
+          alignItems: 'center',
         }}
       >
-        <Table className={styles.table}>
-          <colgroup>
-            <col />
-            <col style={{ width: 160 }} />
-            <col />
-          </colgroup>
-          <TableBody>
-            {Object.entries(attributes).map(([key, attribute]) => (
-              <TableRow key={key}>
-                <TableCell>
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <Body1>{attribute.label}</Body1>
-                    <Caption1 style={{ color: tokens.colorNeutralForeground3 }}>
-                      {attribute.description}
-                    </Caption1>
-                  </div>
-                </TableCell>
-                <TableCell>
-                  <div
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: tokens.spacingVerticalXS,
-                    }}
-                  >
-                    {/* <Badge appearance="tint">{attribute.type}</Badge>
+        <div style={{ flex: 1 }}>
+          <div>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <Subtitle2 style={{ color: tokens.colorNeutralForeground1 }}>
+                Control Showcase
+              </Subtitle2>
+            </div>
+          </div>
+        </div>
+        <div>
+          <Menu
+            hasCheckmarks
+            checkedValues={{
+              selected: [
+                skeleton ? 'skeleton' : undefined,
+                readOnly ? 'readOnly' : undefined,
+              ].filter(Boolean) as string[],
+            }}
+          >
+            <MenuTrigger>
+              <Button icon={<SettingIcon />} appearance="subtle" />
+            </MenuTrigger>
+            <MenuPopover>
+              <MenuList>
+                <MenuItemCheckbox
+                  name="selected"
+                  value="skeleton"
+                  onClick={() => setSkeleton(!skeleton)}
+                >
+                  Skeleton
+                </MenuItemCheckbox>
+                <MenuItemCheckbox
+                  name="selected"
+                  value="readOnly"
+                  onClick={() => setReadOnly(!readOnly)}
+                >
+                  Read Only
+                </MenuItemCheckbox>
+              </MenuList>
+            </MenuPopover>
+          </Menu>
+        </div>
+      </div>
+      <ScrollView>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: tokens.spacingHorizontalM,
+          }}
+        >
+          <Table className={styles.table}>
+            <colgroup>
+              <col />
+              <col style={{ width: 160 }} />
+              <col />
+            </colgroup>
+            <TableBody>
+              {Object.entries(attributes).map(([key, attribute]) => (
+                <TableRow key={key}>
+                  <TableCell>
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                      <Body1>{attribute.label}</Body1>
+                      <Caption1
+                        style={{ color: tokens.colorNeutralForeground3 }}
+                      >
+                        {attribute.description}
+                      </Caption1>
+                    </div>
+                  </TableCell>
+                  <TableCell>
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: tokens.spacingVerticalXS,
+                      }}
+                    >
+                      {/* <Badge appearance="tint">{attribute.type}</Badge>
                     {'format' in attribute && (
                       <Badge appearance="tint" color="severe">
                         {attribute.format}
                       </Badge>
                     )} */}
-                    <Caption1>
-                      <span>Data Type: {attribute.type}</span>
-                    </Caption1>
-                    {'format' in attribute && (
-                      <Caption1
-                        style={{ color: tokens.colorNeutralForeground2 }}
-                      >
-                        <span>Formate: {attribute.format}</span>
+                      <Caption1>
+                        <span>Data Type: {attribute.type}</span>
                       </Caption1>
+                      {'format' in attribute && (
+                        <Caption1
+                          style={{ color: tokens.colorNeutralForeground2 }}
+                        >
+                          <span>Formate: {attribute.format}</span>
+                        </Caption1>
+                      )}
+                    </div>
+                  </TableCell>
+                  <Controller
+                    name={key}
+                    control={form.control}
+                    render={({ field }) => (
+                      <TableCell
+                        style={{ paddingBlock: tokens.spacingVerticalS }}
+                      >
+                        <StandardControl
+                          attribute={attribute}
+                          name={key}
+                          value={field.value}
+                          onChange={field.onChange}
+                          skeleton={skeleton}
+                          readOnly={readOnly}
+                        />
+                      </TableCell>
                     )}
-                  </div>
-                </TableCell>
-                <Controller
-                  name={key}
-                  control={form.control}
-                  render={({ field }) => (
-                    <TableCell
-                      style={{ paddingBlock: tokens.spacingVerticalS }}
-                    >
-                      <StandardControl
-                        attribute={attribute}
-                        name={key}
-                        value={field.value}
-                        onChange={field.onChange}
-                        skeleton={skeleton}
-                      />
-                    </TableCell>
-                  )}
-                />
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
-    </ScrollView>
+                  />
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      </ScrollView>
+    </div>
   );
 }
