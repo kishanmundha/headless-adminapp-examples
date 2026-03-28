@@ -16,7 +16,7 @@
     "@fluentui/react-timepicker-compat": "^0.4.13",
     "@headless-adminapp/app": "~1.4.49",
     "@headless-adminapp/core": "~1.4.47",
-    "@headless-adminapp/fluent": "~1.4.51",
+    "@headless-adminapp/fluent": "~1.4.52",
     "@headless-adminapp/icons": "~1.4.42",
     "@headless-adminapp/icons-fluent": "~1.4.42",
     "@headless-adminapp/next": "~1.4.47",

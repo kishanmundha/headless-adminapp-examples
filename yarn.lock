@@ -1513,10 +1513,10 @@
   dependencies:
     uuid "11.0.3"
 
-"@headless-adminapp/fluent@~1.4.51":
-  version "1.4.51"
-  resolved "https://registry.yarnpkg.com/@headless-adminapp/fluent/-/fluent-1.4.51.tgz#8a507333f353b599372bf7a7eba91967e68f14ab"
-  integrity sha512-nI3exqxiVo59fW/o8wN294aH1Pb0B9FOZxAuu6G2Hhw9WSU4rdGjuggTFRdjY11TTSMQ0dMd1r38UkklES8Rsw==
+"@headless-adminapp/fluent@~1.4.52":
+  version "1.4.52"
+  resolved "https://registry.yarnpkg.com/@headless-adminapp/fluent/-/fluent-1.4.52.tgz#6188bf84315a6a5518bb1bd94ab7da3610bdee85"
+  integrity sha512-Hq2/BMgi+CIxCIUqxEWumdwq8x2/dfi2UWA0fbeRr8Oas2sTrd2MIH5ANr+jiJlgHZyuerWZUtz9lX1K0YZTaw==
   dependencies:
     "@fullcalendar/core" "6.1.15"
     "@fullcalendar/daygrid" "6.1.15"
