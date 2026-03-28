@@ -2,11 +2,8 @@
 
 import '@headless-adminapp/app/index.css';
 import '@headless-adminapp/fluent/styles.css';
-import {
-  webLightTheme,
-  webDarkTheme,
-  FluentProvider,
-} from '@fluentui/react-components';
+import { webLightTheme, webDarkTheme } from '@fluentui/react-components';
+import { FluentProvider } from '@headless-adminapp/fluent/components/fluent/FluentProvider';
 import { useSystemColorScheme } from '@headless-adminapp/app/hooks/useSystemColorScheme';
 import { PropsWithChildren } from 'react';
 
