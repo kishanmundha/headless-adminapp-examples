@@ -10,9 +10,10 @@ export const activitySchema = defineSchema({
   primaryAttribute: 'subject',
   createdAtAttribute: 'createdon',
   updatedAtAttribute: 'updatedon',
-  virtual: true,
-  virtualLogicalNameAttribute: 'activitytype',
-  baseSchemaLogicalNames: ['tasks', 'appointments'],
+  virtual: {
+    baseSchemaLogicalNameAttribute: 'activitytype',
+    baseSchemaLogicalNames: ['tasks', 'appointments'],
+  },
   attributes: {
     id: {
       type: 'id',

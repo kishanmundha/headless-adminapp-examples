@@ -8,7 +8,7 @@ import { LayoutProvider } from '@headless-adminapp/fluent/App/LayoutProvider';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { App } from '@headless-adminapp/fluent/App';
 import { useSystemColorScheme } from '@headless-adminapp/app/hooks/useSystemColorScheme';
-import { useNextRouter } from '@headless-adminapp/next-router';
+import { useNextRouter } from '@headless-adminapp/next';
 import { clientExperienceStore } from '@/app/service-booking/config/client/experienceStore';
 import { clientSchemaStore } from '@/app/service-booking/config/client/schemaStore';
 import { appExperience } from '@/app/service-booking/config/client/app';

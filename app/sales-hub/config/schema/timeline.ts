@@ -10,8 +10,9 @@ export const timelineSchema = defineSchema({
   primaryAttribute: 'subject',
   createdAtAttribute: 'createdon',
   updatedAtAttribute: 'updatedon',
-  virtual: true,
-  virtualLogicalNameAttribute: 'timelinetype',
+  virtual: {
+    baseSchemaLogicalNameAttribute: 'timelinetype',
+  },
   attributes: {
     id: {
       type: 'id',

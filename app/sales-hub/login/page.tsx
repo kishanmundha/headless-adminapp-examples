@@ -22,6 +22,9 @@ export default function Page() {
     return next;
   }, [searchParams]);
 
+  const routerRef = useRef(router);
+  routerRef.current = router;
+
   const nextRef = useRef(next);
   nextRef.current = next;
 
@@ -29,8 +32,8 @@ export default function Page() {
     sessionResolver()
       .then((session) => {
         if (session) {
-          console.log('session', session, next);
-          router.replace(nextRef.current);
+          console.log('session', session, nextRef.current);
+          routerRef.current.replace(nextRef.current);
         }
       })
       .catch(() => {});

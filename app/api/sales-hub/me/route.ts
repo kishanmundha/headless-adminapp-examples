@@ -8,6 +8,8 @@ import Jwt from 'jsonwebtoken';
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req: NextRequest) {
   try {
     const authInfo = getAuthTokenInfo(getTokenFromRequest(req));
@@ -31,7 +33,7 @@ export async function GET(req: NextRequest) {
         },
         {
           status: error.status,
-        }
+        },
       );
     } else {
       console.error(error);
@@ -41,7 +43,7 @@ export async function GET(req: NextRequest) {
         },
         {
           status: 500,
-        }
+        },
       );
     }
   }
@@ -56,7 +58,7 @@ export interface AuthTokenInfo {
 }
 
 function getAuthTokenInfo(
-  token: string | undefined | null
+  token: string | undefined | null,
 ): AuthTokenInfo | null {
   if (!JWT_SECRET) {
     return null;
